@@ -7,53 +7,101 @@ public enum LocationType
     church, graveyard, mine, forest, grove, woods, library, square, laboratory, ruins
 }
 
-public class Location : MonoBehaviour
+public class Locations : MonoBehaviour
 {
     public LocationType type;
+    private PlayerController player;
+    private bool inRange = false;
+    public string badDesc;
+    public string goodDesc;
+
+    void Update()
+    {
+        if (inRange == true && Input.GetKeyDown(KeyCode.F))
+        {
+            typeSwitch();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
-    { //mayhaps an if statement to do the button press interaction thing
-        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+    {
+        player = collision.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            inRange = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<PlayerController>() == player)
+        {
+            inRange = false;
+        }
+    }
+
+    void typeSwitch()
+    {
         if (type == LocationType.church)
         {
-            //player("addclue1", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.graveyard)
         {
-            //player("addclue2", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.mine)
         {
-            //player("GiveKey", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.forest)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.grove)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.woods)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.library)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.square)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.laboratory)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
         else if (type == LocationType.ruins)
         {
-            //player("Sus", player, value);
+            DescribeLocationGood();
+            //add desc to inventory
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
+    }
+
+    void DescribeLocationGood()
+    {
+        Debug.Log(goodDesc);
+    }
+
+    void DescribeLocationBad()
+    {
+        Debug.Log(goodDesc);
     }
 }

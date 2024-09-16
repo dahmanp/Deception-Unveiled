@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7706421816331842902}
   - component: {fileID: 7706421816331842901}
   - component: {fileID: 7706421816331842900}
+  - component: {fileID: 9219094132483018297}
   m_Layer: 0
   m_Name: Unusual Footprints
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 75d8c8cd2a5c4ff4891cb20bd80dbc2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,3 +99,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  description: Footprints that seem human but are not quite the same. They leave
+    behind a trail of uncertainty, hinting at the presence of something otherworldly
+    amidst the familiar.
+--- !u!58 &9219094132483018297
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706421816331842899}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.048

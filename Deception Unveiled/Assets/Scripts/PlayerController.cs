@@ -5,23 +5,15 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Info")]
     public float moveSpeed;
-    public int gold;
-    public int keys;
-    public bool dead;
 
     [Header("Components")]
     public Rigidbody2D rig;
     public SpriteRenderer sr;
-    public Animator weaponAnim;
 
-    [Header("Audio")]
-    public AudioSource coinA;
-    public AudioSource keyA;
-    public AudioSource spawn;
-    public AudioSource die;
+    private int maxSpace = 4;
+    private int curSpace = 0;
 
-    // Local player
-    public static PlayerController me;
+    public int[] inventory;
 
     void Update()
     {
@@ -35,17 +27,16 @@ public class PlayerController : MonoBehaviour
         rig.velocity = new Vector2(x, y) * moveSpeed;
     }
 
-    public void GiveGold(int goldToGive)
+    public void addItem(int itemNum)
     {
-        coinA.Play();
-        gold += goldToGive;
-        //GameUI.instance.UpdateGoldText(gold);
-    }
-
-    public void GiveKey(int keysToGive)
-    {
-        keyA.Play();
-        keys += keysToGive;
-        //GameUI.instance.UpdateKeysText(keys);
+        if (curSpace < maxSpace)
+        {
+            inventory[curSpace] = itemNum;
+            curSpace++;
+            Debug.Log("Added to inventory!");
+        } else
+        {
+            Debug.Log("Too full!");
+        }  
     }
 }

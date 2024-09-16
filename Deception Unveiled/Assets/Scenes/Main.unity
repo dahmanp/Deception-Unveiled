@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61064117}
   - component: {fileID: 61064118}
+  - component: {fileID: 61064119}
   m_Layer: 0
   m_Name: Shadowvale Forest
   m_TagString: Untagged
@@ -165,7 +166,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.37190437, y: 7.9071207}
@@ -181,6 +182,82 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.726278, y: 28.715212}
   m_EdgeRadius: 0
+--- !u!114 &61064119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61064116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
+  badDesc: A dense, dark area with limited light. It feels mysterious with occasional
+    indistinct noises.
+  goodDesc: A dense and foreboding forest where sunlight struggles to penetrate the
+    thick canopy of twisted branches. Shadows dance amongst the trees, and strange
+    whispers seem to echo through the undergrowth. The forest exudes an air of mystery
+    and danger.
+--- !u!1001 &155409410
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.465456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468061, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048683645563468062, guid: 713353a504c79634582cfa1a48a84487, type: 3}
+      propertyPath: m_Name
+      value: Strange Journal Entries
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 713353a504c79634582cfa1a48a84487, type: 3}
 --- !u!1 &373106124
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373106125}
   - component: {fileID: 373106126}
+  - component: {fileID: 373106127}
   m_Layer: 0
   m_Name: Abandoned Mine
   m_TagString: Untagged
@@ -223,7 +301,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.6820717, y: -0.47529507}
@@ -239,6 +317,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.902576, y: 5.333454}
   m_EdgeRadius: 0
+--- !u!114 &373106127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373106124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  badDesc: "A vast, neglected area with some old equipment. It\u2019s cool and musty
+    with occasional sounds."
+  goodDesc: A sprawling network of dark tunnels and caverns, abandoned long ago by
+    miners. The mine is filled with rusty mining equipment, collapsed shafts, and
+    echoing drips of water. The air is cool and musty, with the distant rumble of
+    underground streams.
 --- !u!1 &450604867
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 450604868}
   - component: {fileID: 450604869}
+  - component: {fileID: 450604870}
   m_Layer: 0
   m_Name: Silent Grove
   m_TagString: Untagged
@@ -281,7 +379,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1450429, y: 13.283371}
@@ -297,6 +395,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 25.204212, y: 17.962711}
   m_EdgeRadius: 0
+--- !u!114 &450604870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450604867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
+  badDesc: "A quiet spot with filtered light. It\u2019s calm with gentle sounds and
+    a faint scent."
+  goodDesc: A tranquil and serene grove where shafts of golden sunlight filter through
+    the canopy, dappling the forest floor with light. The air is filled with the
+    gentle rustle of leaves and the sweet fragrance of wildflowers. It's a peaceful
+    oasis amidst the chaos of the surrounding wilderness.
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +425,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -350,7 +468,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 11.82
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -381,6 +499,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e981e9dfcdb0adc4d8112ff7c9f759dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1577852438}
+--- !u!1001 &596114364
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8587383052463034950, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_Name
+      value: Obscure Symbols
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3847766
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.3978944
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587383052463034969, guid: aae95249b270fb64ca5a767617918b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aae95249b270fb64ca5a767617918b57, type: 3}
 --- !u!1 &796871883
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796871884}
   - component: {fileID: 796871885}
+  - component: {fileID: 796871886}
   m_Layer: 0
   m_Name: Ancient Ruins
   m_TagString: Untagged
@@ -423,7 +612,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.37190437, y: -0.3719058}
@@ -439,6 +628,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.726278, y: 12.157155}
   m_EdgeRadius: 0
+--- !u!114 &796871886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796871883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 9
+  badDesc: Old, partially hidden remnants of something past. There are broken structures
+    and figures suggesting a forgotten past.
+  goodDesc: Crumbling ruins of an ancient civilization, shrouded in moss and ivy,
+    and overrun by the encroaching wilderness. The ruins are a haunting reminder
+    of a forgotten past, with weathered statues and crumbling archways hinting at
+    lost secrets and untold mysteries.
 --- !u!1 &884719255
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884719256}
   - component: {fileID: 884719257}
+  - component: {fileID: 884719258}
   m_Layer: 0
   m_Name: Secret Laboratory
   m_TagString: Untagged
@@ -481,7 +690,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.6820717, y: -0.47529507}
@@ -497,6 +706,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.902576, y: 5.333454}
   m_EdgeRadius: 0
+--- !u!114 &884719258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884719255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 8
+  badDesc: A hidden place with various unusual items. The air has a strong scent
+    of chemicals.
+  goodDesc: A hidden laboratory concealed beneath the town, filled with bubbling
+    vials, crackling electricity, and mysterious machinery. The air is thick with
+    the scent of chemicals, and the walls are lined with shelves of arcane artifacts
+    and forbidden experiments.
 --- !u!1 &1000971316
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000971317}
   - component: {fileID: 1000971318}
+  - component: {fileID: 1000971319}
   m_Layer: 0
   m_Name: Whistling Woods
   m_TagString: Untagged
@@ -539,7 +768,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.37190437, y: 7.9071207}
@@ -555,6 +784,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.726278, y: 28.715212}
   m_EdgeRadius: 0
+--- !u!114 &1000971319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000971316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  badDesc: A breezy area with moving branches. The air feels fresh with distant sounds.
+  goodDesc: A windswept forest where the branches sway and whistle in the breeze.
+    The trees stand tall and slender, their leaves shimmering with a silvery sheen.
+    The air is crisp and invigorating, with the distant melody of birdsong carried
+    on the wind.
 --- !u!1 &1145425352
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1145425353}
   - component: {fileID: 1145425354}
+  - component: {fileID: 1145425355}
   m_Layer: 0
   m_Name: Old Library
   m_TagString: Untagged
@@ -597,7 +845,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.6820717, y: -0.47529507}
@@ -613,6 +861,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.902576, y: 5.333454}
   m_EdgeRadius: 0
+--- !u!114 &1145425355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145425352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 6
+  badDesc: A dim space filled with shelves and books. Light comes through colored
+    glass, creating patterns.
+  goodDesc: A dusty and dimly lit library filled with towering bookshelves and ancient
+    tomes. Sunlight streams through stained glass windows, casting colorful patterns
+    on the worn wooden tables and threadbare carpets. The library is a treasure trove
+    of knowledge and secrets waiting to be uncovered.
 --- !u!1 &1376767972
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376767973}
   - component: {fileID: 1376767974}
+  - component: {fileID: 1376767975}
   m_Layer: 0
   m_Name: Dreary Graveyard
   m_TagString: Untagged
@@ -655,7 +923,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1450429, y: 13.283371}
@@ -671,6 +939,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 25.204212, y: 17.962711}
   m_EdgeRadius: 0
+--- !u!114 &1376767975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376767972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  badDesc: An obscure place with overgrown markers and an uneasy feel. The air is
+    damp, and there are distant sounds.
+  goodDesc: An eerie and overgrown graveyard shrouded in mist, with moss-covered
+    tombstones and gnarled trees casting long shadows. The air is heavy with the
+    scent of damp earth, and the only sounds are the cawing of distant crows and
+    the rustling of leaves.
 --- !u!1 &1410731042
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410731043}
   - component: {fileID: 1410731044}
+  - component: {fileID: 1410731045}
   m_Layer: 0
   m_Name: Town Square
   m_TagString: Untagged
@@ -713,7 +1001,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.1639807, y: -0.3719058}
@@ -729,6 +1017,288 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.142128, y: 12.157155}
   m_EdgeRadius: 0
+--- !u!114 &1410731045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410731042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 7
+  badDesc: "A central, active area with stalls and people. It\u2019s lively with
+    familiar scents and sounds."
+  goodDesc: The bustling heart of the town, where market stalls line cobblestone
+    streets and lively crowds gather to gossip and trade. The air is filled with
+    the aroma of freshly baked bread and the sound of laughter and conversation.
+--- !u!1 &1577852435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577852438}
+  - component: {fileID: 1577852437}
+  - component: {fileID: 1577852439}
+  - component: {fileID: 1577852440}
+  - component: {fileID: 1577852436}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1577852436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577852435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a75c9fda0055243a67c7b3050969d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rig: {fileID: 1577852439}
+  sr: {fileID: 1577852437}
+  inventory: 00000000000000000000000000000000
+--- !u!212 &1577852437
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577852435}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1577852438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577852435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9, y: -0.64, z: 0}
+  m_LocalScale: {x: 3.76, y: 3.76, z: 3.76}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1577852439
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577852435}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1577852440
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577852435}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1001 &1711143066
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6464712558585084785, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_Name
+      value: Unearthed Bones
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.738782
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0402408
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464712558585084790, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02df7ea01739a7e45800ce6c2636193c, type: 3}
+--- !u!1001 &1721077652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.0870867
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.3080215
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558597, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386118808132558600, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
+      propertyPath: m_Name
+      value: Torn Clothing
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9cd1e038d71f2b4d9d289f7d60fa710, type: 3}
 --- !u!1 &1898809389
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +1309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898809390}
   - component: {fileID: 1898809391}
+  - component: {fileID: 1898809392}
   m_Layer: 0
   m_Name: Town Church
   m_TagString: Untagged
@@ -771,7 +1342,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.37190437, y: -0.3719058}
@@ -787,6 +1358,69 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.726278, y: 12.157155}
   m_EdgeRadius: 0
+--- !u!114 &1898809392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898809389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  badDesc: "An old building with some decorative features. Inside, there\u2019s a
+    subdued atmosphere and a distinct scent."
+  goodDesc: A centuries-old church with weathered stone walls and stained glass windows.
+    Inside, flickering candle light illuminates rows of wooden pews, and the air
+    is thick with the scent of incense. The church exudes an aura of solemnity and
+    reverence.
+--- !u!1 &1988098291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1988098293}
+  - component: {fileID: 1988098292}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1988098292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988098291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362d09f7d8687b34d9609796d45e6946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1988098293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988098291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0282516, y: 0.28136635, z: 0.08812327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138405640
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,5 +1513,5 @@ Transform:
   - {fileID: 373106125}
   - {fileID: 884719256}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
