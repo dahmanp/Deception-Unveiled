@@ -43,56 +43,44 @@ public class Pickup : MonoBehaviour
     {
         if (type == PickupType.journal)
         {
-            player.addItem(1);
-            DescribeItem();
+            check(1);
         }
         else if (type == PickupType.footprints)
         {
-            player.addItem(2);
-            DescribeItem();
+            check(2);
         }
         else if (type == PickupType.symbols)
         {
-            player.addItem(3);
-            DescribeItem();
+            check(3);
         }
         else if (type == PickupType.whispers)
         {
-            player.addItem(4);
-            DescribeItem();
+            check(4);
         }
         else if (type == PickupType.folklore)
         {
-            player.addItem(5);
-            DescribeItem();
+            check(5);
         }
         else if (type == PickupType.tome)
         {
-            player.addItem(6);
-            DescribeItem();
+            check(6);
         }
         else if (type == PickupType.bones)
         {
-            player.addItem(7);
-            DescribeItem();
+            check(7);
         }
         else if (type == PickupType.chains)
         {
-            player.addItem(8);
-            DescribeItem();
+            check(8);
         }
         else if (type == PickupType.clothing)
         {
-            player.addItem(9);
-            DescribeItem();
+            check(9);
         }
         else if (type == PickupType.gemstone)
         {
-            player.addItem(10);
-            DescribeItem();
+            check(10);
         }
-        Destroy(gameObject);
-        //dont forget to change this - item should not be destroyed if it is not collected
     }
 
     void DescribeItem()
@@ -100,5 +88,17 @@ public class Pickup : MonoBehaviour
         Debug.Log(description);
     }
 
-
+    void check(int i)
+    {
+        if (player.curSpace < player.maxSpace)
+        {
+            Debug.Log("Added to inventory!");
+            DescribeItem();
+            player.addItem(i);
+            Destroy(gameObject);
+        } else
+        {
+            Debug.Log("Too full!");
+        }
+    }
 }

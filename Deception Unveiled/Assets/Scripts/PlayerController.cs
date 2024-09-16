@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rig;
     public SpriteRenderer sr;
 
-    private int maxSpace = 4;
-    private int curSpace = 0;
+    public int maxSpace = 4;
+    public int curSpace = 0;
 
     public int[] inventory;
+    public int[] locInventory;
 
     void Update()
     {
@@ -29,14 +30,15 @@ public class PlayerController : MonoBehaviour
 
     public void addItem(int itemNum)
     {
-        if (curSpace < maxSpace)
-        {
-            inventory[curSpace] = itemNum;
-            curSpace++;
-            Debug.Log("Added to inventory!");
-        } else
-        {
-            Debug.Log("Too full!");
-        }  
+        inventory[curSpace] = itemNum;
+        curSpace++;
+        // add this to ui inventory slots at some point
+    }
+
+    public void addLocation(int locationNum)
+    {
+        //locInventory[curSpace] = itemNum;
+        //curSpace++;
+        // i want this put into a journal of sorts in the order you recieve them
     }
 }
