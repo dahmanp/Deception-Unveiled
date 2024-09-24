@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &547054623085811418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547054623085811429}
+  - component: {fileID: 547054623085811428}
+  - component: {fileID: 547054623085811419}
+  - component: {fileID: 547054623085811430}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547054623085811429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547054623085811418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.49762, y: -2.545018, z: 0}
+  m_LocalScale: {x: 3.5898, y: 3.5898, z: 3.5898}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547054623085811428
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547054623085811418}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 0.7924528, g: 0.23474543, b: 0.23474543, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &547054623085811419
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547054623085811418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.038377404, y: 0.13457859}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5095108, y: 1.9210575}
+  m_EdgeRadius: 0
+--- !u!114 &547054623085811430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547054623085811418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36f085a28eddb44fb56f57c933ee4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: 0
+  intros:
+  - Hello! Welcome to Whispering Pines! Not many of us live here, but the folks that
+    do really enjoy fancy jewelry. Can you help me find a piece for my next necklace
+    line?
+  - Hey there! Welcome to our town! Are you looking for something interesting? If
+    you help me find my lost book, I can give you some interesting facts.
+  - "Please detective, I need your help. My beloved daughter has gone missing, and
+    I can\u2019t find her anywhere! I\u2019ve searched the entire town but I have
+    found no trace of her. Please, find me anything that could tell me where she
+    is."
+  - "Have you heard the rumors? People tend to talk a whole lot when there are mysterious
+    things happening. I have my own secrets, and I can tell you them if you give
+    me the town\u2019s talk."
+  - "I\u2019ve been really unsettled lately. I\u2019ve been hearing strange sounds
+    when I\u2019m trying to sleep. Strange whispers. Can you find out what they\u2019re
+    saying?"
+  - Good evening. If you have a moment, I would like you to find something for me.
+    It may help you in your investigation. I'm sure you have heard by now of monstrous
+    creatures that take the forms of friends and family, roaming the forests and
+    stalking our town of Whispering Pines. Bring back a clue that can help with tracking
+    them down and I will tell you something that may be valuable to you.
+  - I heard rattling metal the other day. It was awful. I can still hear it sometimes.
+    Please find the awful source so I can destroy it.
+  - "Hello, dear detective! Can you help me find something? I\u2019m looking for
+    something cool to use as a tattoo design. I know you\u2019re busy, but this is
+    very important to me."
+  - "My poor dog is starving, can you help me find something to feed him? He\u2019s
+    the one that keeps guard over my home and keeps my family safe."
+  - Have you heard of the doctor that died recently? I wonder if his notes are still
+    around the town. Can you find them for me? I can help you decipher them.
+  fails:
+  - "Umm. This isn\u2019t what I was looking for. Don\u2019t talk to me if you can\u2019t
+    complete a simple task."
+  - "I don\u2019t think this is right\u2026 Maybe I can\u2019t help you after all.
+    Sorry."
+  - This did not belong to her. She must be out there somewhere, I know it! I will
+    go find someone who can actually track her down.
+  - "That doesn\u2019t make sense. I\u2019m afraid I can\u2019t help you anymore."
+  - "I\u2019m not sure this is what I heard. Thanks for trying, though. "
+  - "This is not what I asked for. You aren\u2019t as good of a detective team as
+    I thought you would be - I\u2019ll keep my information for a real professional."
+  - "This doesn\u2019t seem right. I don\u2019t think this could make that sound."
+  - "Ehhh I don\u2019t think this works. Sorry for the trouble, but you best be on
+    your way."
+  - "I don\u2019t think dogs can eat that. Never mind, I\u2019ll find something myself."
+  - Do these look like notes to you? Are you stupid?
+  wins:
+  - Thank you so much! I hear this gemstone has paranormal properties, but I just
+    want to make it into a necklace!
+  - "This is my book, thank you! I found it in the woods nearby, and have been fascinated
+    with the contents. Did you know that the forests around Whispering Pines have
+    magical properties? It\u2019s pretty interesting, though a bit scary at times."
+  - "Oh no\u2026 this was a piece of her dress\u2026 Thank you for bringing this
+    to me. I think she was led away by one of those foul monsters, and I\u2019m afraid
+    she must not have made it. Take care, detectives, I\u2019m going to return home
+    to mourn."
+  - "Ah, thank you! Here\u2019s my secret: I saw a vile creature snatch a young girl
+    the other night - I never liked her parents so I said nothing. Have fun with
+    the rest of your investigation!"
+  - "This sounds exactly like the voices in the night! I hear them every night at
+    around 9pm\u2026 I hope you catch whatever person is doing it."
+  - "Ah, this is just what I\u2019ve been looking for! These footprints appear to
+    be fairly humanoid in shape, but fluctuate in size and density. What do you make
+    of this?"
+  - "Oh, that wretched thing. I\u2019m going to melt it down and turn it into something
+    useful. Though, it\u2019s strange that there\u2019s a random broken chain in
+    the forest. I wonder where it came from."
+  - "Perfect! These remind me of those symbols my family used to use to keep monsters
+    at bay. Those are just legends though, so I wouldn\u2019t worry too much."
+  - "Oh he will love this! Thank you so much! It\u2019s funny, these bones almost
+    look human. Thank you again for your help, and good luck with the investigation!"
+  - "Ah yes, exactly what I was looking for. That\u2019s strange, I can hardly read
+    them. Do you see that they\u2019re encoded? He must\u2019ve really wanted them
+    kept secret."
+  answers: 0a000000060000000900000005000000040000000200000008000000030000000700000001000000
+  intro: 
+  answer: 0
+  fail: 
+  win: 
+  inQuest: 0
+  response: 0

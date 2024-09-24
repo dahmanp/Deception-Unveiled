@@ -1,13 +1,12 @@
 //TO DO LIST:
 
 //General
-//- npc interaction
-    //- dialogue
-    //- quest acceptance / rejection
 //- location interaction
     //- opt to select this location for the quest
     //- puzzle of some sort to get the right info
-//- post quest rest mode (option to call into hq and get hints)
+//- interrogation
+    //- answer the questions / say the right things
+//- make the hints do something
 
 //Art
 //- MC design
@@ -23,4 +22,3 @@
 //Misc
 //- inventory, option to throw away evidence (items) to free up inventory slots
 //- place to hold location descriptions, and interview answers (notebook mayhaps?)
-//- 

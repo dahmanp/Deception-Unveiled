@@ -19,6 +19,9 @@ public class Pickup : MonoBehaviour
         if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
             typeSwitch();
+        } else if (inRange == true && Input.GetKeyDown(KeyCode.Q))
+        {
+            DescribeItem();
         }
     }
 
@@ -29,6 +32,7 @@ public class Pickup : MonoBehaviour
         {
             inRange = true;
         }
+        player.interactText.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -37,6 +41,8 @@ public class Pickup : MonoBehaviour
         {
             inRange = false;
         }
+        player.interactText.SetActive(false);
+        player.inspectText.SetActive(false);
     }
 
     void typeSwitch()
@@ -85,7 +91,8 @@ public class Pickup : MonoBehaviour
 
     void DescribeItem()
     {
-        Debug.Log(description);
+        player.inspectText.SetActive(true);
+        player.desc.text = description;
     }
 
     void check(int i)
@@ -93,9 +100,9 @@ public class Pickup : MonoBehaviour
         if (player.curSpace < player.maxSpace)
         {
             Debug.Log("Added to inventory!");
-            DescribeItem();
             player.addItem(i);
             Destroy(gameObject);
+            player.inspectText.SetActive(false);
         } else
         {
             Debug.Log("Too full!");

@@ -15,11 +15,27 @@ public class Locations : MonoBehaviour
     public string badDesc;
     public string goodDesc;
 
+    public bool collected = false;
+
+    private NPC_Locations npcLoc;
+
+    void Start()
+    {
+        npcLoc = FindObjectOfType<NPC_Locations>();
+    }
+
     void Update()
     {
         if (inRange == true && Input.GetKeyDown(KeyCode.F))
         {
-            typeSwitch();
+            if (npcLoc.inQuest == false)
+            {
+                DescribeLocationGood();
+            } else if (npcLoc.inQuest == true)
+            {
+                typeSwitch();
+                //option, do you want to choose this for your answer?
+            }
         }
     }
 
@@ -44,55 +60,54 @@ public class Locations : MonoBehaviour
     {
         if (type == LocationType.church)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(1);
+            collected = true;
         }
         else if (type == LocationType.graveyard)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(2);
+            collected = true;
         }
         else if (type == LocationType.mine)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(3);
+            collected = true;
         }
         else if (type == LocationType.forest)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(4);
+            collected = true;
         }
         else if (type == LocationType.grove)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(5);
+            collected = true;
         }
         else if (type == LocationType.woods)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(6);
+            collected = true;
         }
         else if (type == LocationType.library)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(7);
+            collected = true;
         }
         else if (type == LocationType.square)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(8);
+            collected = true;
         }
         else if (type == LocationType.laboratory)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(9);
+            collected = true;
         }
         else if (type == LocationType.ruins)
         {
-            DescribeLocationGood();
-            //add desc to inventory
+            check(10);
+            collected = true;
         }
-        //Destroy(gameObject);
     }
 
     void DescribeLocationGood()
@@ -102,6 +117,16 @@ public class Locations : MonoBehaviour
 
     void DescribeLocationBad()
     {
-        Debug.Log(goodDesc);
+        Debug.Log(badDesc);
+    }
+
+    void check(int i)
+    {
+        npcLoc.response = i;
+        DescribeLocationBad();
+        if (collected==false)
+        {
+            player.addLocation(goodDesc);
+        }
     }
 }
