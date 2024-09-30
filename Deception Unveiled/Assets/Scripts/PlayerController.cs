@@ -25,19 +25,38 @@ public class PlayerController : MonoBehaviour
     public TMP_Text desc;
     public GameObject buttons;
     public GameObject exitButton;
+    public GameObject invScreen;
+    public TMP_Text hintText;
+    public GameObject hintScreen;
+    public GameObject locQuestButtons;
+    public GameObject quiz;
+    public TMP_Text question;
+    public TMP_Text answer1;
+    public TMP_Text answer2;
+    public TMP_Text answer3;
 
     public int questsCompleted;
     public int questsFailed;
     public bool questEndFail = false;
     public bool questEndWin = false;
-    //if the quest is done and you got the right answer, you can choose an option in the rest period
-    //if the quest is done but you fail, you get to do nothing and the shapeshifter gets to do something
+
+    public bool winRest = false;
+    public bool failRest = false;
+    
     public int collectionHints;
     public int investigationHints;
+    public int interviewHints;
+
+    public Image[] itemInvSlots;
+    public Sprite[] itemSprites;
 
     void Update()
     {
         Move();
+        sortArray(inventory);
+        if (curSpace < 0) {
+            curSpace = 0;
+        }
     }
 
     void Move()
@@ -49,9 +68,17 @@ public class PlayerController : MonoBehaviour
 
     public void addItem(int itemNum)
     {
-        inventory[locationSpace] = itemNum;
-        locationSpace++;
-        // add this to ui inventory slots at some point
+        inventory[curSpace] = itemNum;
+        setSprite(curSpace, itemNum);
+        curSpace++;
+    }
+
+    void setSprite(int i, int itemNum)
+    {
+        if (curSpace <= 4)
+        {
+            itemInvSlots[i].sprite = itemSprites[itemNum - 1];
+        }
     }
 
     public void addLocation(string locationDesc)
@@ -68,18 +95,20 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < array.Length; i++)
         {
-            Debug.Log("test");
             if (array[i] != 0)
             {
-                Debug.Log("yuh");
                 array[nonZero] = array[i];
+                itemInvSlots[nonZero].sprite = itemInvSlots[i].sprite;
                 nonZero++;
+            } else
+            {
+                itemInvSlots[i].sprite = null;
             }
         }
         for (int i = nonZero; i < array.Length; i++)
         {
-            Debug.Log("no");
             array[i] = 0;
+            itemInvSlots[i].sprite = null;
         }
         return array;
     }

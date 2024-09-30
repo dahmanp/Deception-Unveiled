@@ -19,12 +19,14 @@ public class NPC : MonoBehaviour
     public string[] intros;
     public string[] fails;
     public string[] wins;
+    public string[] hints;
     public int[] answers;
 
     public string intro;
     public int answer;
     public string fail;
     public string win;
+    public string hint;
 
     public bool inQuest = false;
 
@@ -37,7 +39,6 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
-        typeSwitch();
         if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
             if (inQuest == false)
@@ -46,16 +47,16 @@ public class NPC : MonoBehaviour
             } else if (inQuest == true)
             {
                 selectOption();
-                check();
             }
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        player = collision.gameObject.GetComponent<PlayerController>();
-        if (player != null)
+        PlayerController potentialPlayer = collision.gameObject.GetComponent<PlayerController>();
+        if (potentialPlayer != null)
         {
+            player = potentialPlayer;
             inRange = true;
         }
     }
@@ -65,6 +66,7 @@ public class NPC : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() == player)
         {
             inRange = false;
+            player = null;
         }
     }
 
@@ -74,9 +76,10 @@ public class NPC : MonoBehaviour
         win = wins[i];
         fail = fails[i];
         answer = answers[i];
+        hint = hints[i];
     }
 
-    void typeSwitch()
+    public void typeSwitch()
     {
         if (quest == ItemQuest.quest1)
         {
@@ -120,52 +123,81 @@ public class NPC : MonoBehaviour
         }
     }
 
-    void start()
+    public void start()
     {
+        if (player == null)
+        {
+            Debug.Log("start Error");
+            return;
+        }
+
         player.desc.text = intro;
         player.inspectText.SetActive(true);
         player.buttons.SetActive(true);
         inQuest = true;
+
+        if (player.collectionHints > 0)
+        {
+            player.hintText.text = hint;
+            player.hintScreen.SetActive(true);
+            player.collectionHints--;
+        }
     }
 
     public void selectOption()
     {
-        int i = 0;
-        for (i=0; i<4; i++)
+        if (player == null)
         {
-            if (player.inventory[i] == answer)
-            {
-                response = player.inventory[i];
-                player.inventory[i] = 0;
-            }
+            Debug.Log("selectOption Error");
+            return;
         }
-        //somehow allow the player to select an item from their inventory
+        player.invScreen.SetActive(true);
     }
 
-    void check()
+    public void check()
     {
+        if (player == null)
+        {
+            //the error is here
+            Debug.Log("check (player) Error");
+            return;
+        }
+        if (!inQuest)
+        {
+            Debug.Log("check (inquest) Error");
+            return;
+        }
+
         if (response == answer)
         {
+            //Debug.Log("correct");
+            Debug.Log(win);
             player.desc.text = win;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
+            player.invScreen.SetActive(false);
             inQuest = false;
             player.questsCompleted++;
             player.questEndWin = true;
             player.curSpace--;
+            if (player.curSpace < 0) {
+                player.curSpace = 0;
+            }
             player.sortArray(player.inventory);
 
-            boxCollider.enabled = false;
+            this.enabled = false;
         } else
         {
+            //Debug.Log("incorrect");
             player.desc.text = fail;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
+            player.invScreen.SetActive(false);
             inQuest = false;
             player.questsFailed++;
             player.questEndFail = true;
 
-            boxCollider.enabled = false;
+            this.enabled = false;
         }
     }
 }

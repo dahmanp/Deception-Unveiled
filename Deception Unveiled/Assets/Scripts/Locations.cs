@@ -35,6 +35,7 @@ public class Locations : MonoBehaviour
             {
                 typeSwitch();
                 //option, do you want to choose this for your answer?
+                //button popup, and if selected it then allows you to select the option
             }
         }
     }
@@ -120,8 +121,9 @@ public class Locations : MonoBehaviour
         Debug.Log(badDesc);
     }
 
-    void check(int i)
+    public void check(int i)
     {
+        //check this in the menu script
         npcLoc.response = i;
         DescribeLocationBad();
         if (collected==false)

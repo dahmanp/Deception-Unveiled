@@ -99,7 +99,7 @@ public class Pickup : MonoBehaviour
     {
         if (player.curSpace < player.maxSpace)
         {
-            Debug.Log("Added to inventory!");
+            //Debug.Log("Added to inventory!");
             player.addItem(i);
             Destroy(gameObject);
             player.inspectText.SetActive(false);

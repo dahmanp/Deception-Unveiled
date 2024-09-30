@@ -38,19 +38,19 @@ public class RestPeriod : MonoBehaviour
 
     void Update()
     {
-        if (player.questEndWin == true)
+        if (player.winRest == true)
         {
             canvas.SetActive(true);
             SetScreen(restPeriodIntro);
             chooseEvent();
-            player.questEndWin = false;
+            player.winRest = false;
         }
-        else if (player.questEndFail == true)
+        else if (player.failRest == true)
         {
             canvas.SetActive(true);
             SetScreen(failTransitionPage);
             chooseEvent();
-            player.questEndFail = false;
+            player.failRest = false;
         }
     }
 

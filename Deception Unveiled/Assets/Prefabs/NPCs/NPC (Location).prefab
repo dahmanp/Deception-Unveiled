@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8316494636824384752}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.480001, y: -11.25, z: 0}
   m_LocalScale: {x: 3.5898, y: 3.5898, z: 3.5898}
   m_ConstrainProportionsScale: 0
@@ -178,6 +178,15 @@ MonoBehaviour:
     the back of the graveyard, you notice something off about one of the headstones:
     there is no birth date on it. The stone reads: Jordan Hatcher: Doctor, Husband,
     Friend. Interesting.'
+  hints:
+  - "Check out the crumbling remains of a lost civilization; they\u2019re full of
+    secrets."
+  - 'Wander through the thick woods where sunlight struggles to shine; it feels mysterious. '
+  - "Look for the hidden space beneath the town filled with strange devices; it\u2019s
+    intriguing. "
+  - "Walk in the forest where the wind makes the trees whistle; it\u2019s refreshing
+    and lively."
+  - Explore the misty resting place filled with mossy stones; it has an eerie atmosphere.
   answers: 0a00000004000000090000000600000002000000
   response: 0
   intro: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 547054623085811428}
   - component: {fileID: 547054623085811419}
   - component: {fileID: 547054623085811430}
+  - component: {fileID: 6304107935927586687}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547054623085811418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c36f085a28eddb44fb56f57c933ee4b4, type: 3}
   m_Name: 
@@ -199,10 +200,44 @@ MonoBehaviour:
   - "Ah yes, exactly what I was looking for. That\u2019s strange, I can hardly read
     them. Do you see that they\u2019re encoded? He must\u2019ve really wanted them
     kept secret."
+  hints:
+  - "There\u2019s a stunning gem that catches the light; its brilliance hints at
+    deeper mysteries waiting to be uncovered."
+  - "There\u2019s talk of a dusty tome filled with forbidden knowledge; its pages
+    are said to pulse with echoes of lost magic."
+  - Be on the lookout for torn fabric; it may reveal marks of desperate encounters
+    and battles fought in the dark
+  - You might want to talk to the elders; their stories often weave together history
+    and legend, revealing hidden clues.
+  - At night, listen closely for soft sounds that drift through the darkness; they
+    could carry hidden secrets.
+  - Keep an eye out for strange tracks that twist in unexpected ways; they might
+    hint at something otherworldly nearby.
+  - Rumor has it that silent remains lie somewhere, bearing witness to lives lived
+    and lost in the shadows.
+  - Look for ancient carvings; their intricate patterns are said to whisper secrets
+    of forgotten rituals.
+  - Rumor has it that silent remains lie somewhere, bearing witness to lives lived
+    and lost in the shadows.
+  - They say there are fragmented thoughts somewhere, revealing unsettling insights
+    about a mind unravelling.
   answers: 0a000000060000000900000005000000040000000200000008000000030000000700000001000000
   intro: 
   answer: 0
   fail: 
   win: 
+  hint: 
   inQuest: 0
   response: 0
+--- !u!114 &6304107935927586687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547054623085811418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f7a624ad7750247ae65ebbbd92fd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

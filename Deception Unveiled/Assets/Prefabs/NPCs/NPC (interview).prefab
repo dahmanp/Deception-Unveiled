@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8951467014621211165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8951467014621211105}
+  - component: {fileID: 8951467014621211104}
+  - component: {fileID: 8951467014621211107}
+  - component: {fileID: 8951467014621211110}
+  m_Layer: 0
+  m_Name: NPC (interview)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8951467014621211105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951467014621211165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.37, y: -18.44, z: 0}
+  m_LocalScale: {x: 3.5898, y: 3.5898, z: 3.5898}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8951467014621211104
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951467014621211165}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 0.08522601, g: 0.6349385, b: 0.7924528, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &8951467014621211107
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951467014621211165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.038377404, y: 0.13457859}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5095108, y: 1.9210575}
+  m_EdgeRadius: 0
+--- !u!114 &8951467014621211110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951467014621211165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca46fa9f2c9595245b1cfd5ad4c99da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: 0
+  intro_quests:
+  - "I\u2019m sorry you arrived here when the mood is so gloomy. Maybe we can do
+    something to brighten the mood? Ask someone in town if there is something that
+    would cheer them up."
+  - Have you found out how many total people have gone missing? I need to update
+    the town records, and that information would be really helpful.
+  - Hey there, travelers! Can you ask someone if they know what times to avoid being
+    outside? I want to make sure I get all my yard work done before the monsters
+    come out.
+  - Hello detectives, can you get some information from a person around the town?
+    I would like to know the best way to protect my house from the monsters.
+  - "I need to know what the best food to stock up on is. I\u2019m planning on hiding
+    out in my house until the monsters die."
+  intros:
+  - Good evening, what can I do for you?
+  - Hi. Did you need something?
+  - Howdy, what seems to be the problem?
+  - Hiya, what can I do for you?
+  - Hello there, how may I be of service to you?
+  fails:
+  - Go away.
+  - Leave me alone, weirdo.
+  - "I really don\u2019t want to talk to you anymore. Good day."
+  - "I don\u2019t think that\u2019s any of your business. Leave me alone."
+  - "Um, I don\u2019t know. I\u2019m busy, so please let me get back to work."
+  win1s:
+  - "Oh, how thoughtful! Let\u2019s see\u2026 a town gathering may help - everyone
+    used to get together a lot before the monsters started taking folks."
+  - "Oh, um, yeah, it\u2019s been the talk of the town. So many of my friends are
+    gone and I\u2019m worried that I\u2019m next\u2026"
+  - "Hmm\u2026 it\u2019s a little tricky, but they tend to be more active during
+    the hours of the night. At least, if what I hear is correct."
+  - I have been boarding up my windows and giving my family secret codes to ensure
+    that they are who they say they are. I hear the monster can mimic your family
+    and friends. Is there anything else you want to know?
+  - I would say that your best bet is to get non-perishable canned food. It will
+    last longer and be safer to eat.
+  win2s:
+  - "I think, in addition to the gathering, a potluck may be a good idea. Everyone
+    has their own specialties to share, and it\u2019s wonderful to eat together."
+  - "I would say about five, but keep in mind our town\u2019s population is only
+    about 30."
+  - I would steer clear of the forests at night, and any area not so well lit. Hope
+    I was a little bit helpful during your investigation!
+  - Not yet, though I have been hearing whispers in the night, and strange growling
+    and crackling. Hope this was helpful.
+  - There are plenty of high quality storage tanks at the general store, I would
+    look there! Hope you find what you need!
+  Q1response1s:
+  - What do you like to eat for dinner?
+  - What is your opinion on the folks who went missing?
+  - What time does your work shift end?
+  - How do you best protect your house from intruders?
+  - How would you fare in a battle against a monster?
+  Q1response2s:
+  - Is there anything we can do to make your day better?
+  - Do you think you are going to be the next victim?
+  - What is the best food for the apocalypse?
+  - "What is your wife\u2019s name?"
+  - What is the best food to stock up on in an emergency situation?
+  Q1response3s:
+  - What does your dog like to eat for dinner?
+  - Have you noticed anyone going missing lately?
+  - "Have you noticed the monsters\u2019 general activity?"
+  - How many monsters have you seen?
+  - What is the best pet to get for self defense?
+  Q2response1s:
+  - What do you think the town would like?
+  - How many people would you say have gone missing?
+  - What animal should I buy to protect me?
+  - What food are you stocking up on?
+  - Do you have a good suggestion for water storage for long periods of time?
+  Q2response2s:
+  - Do you want to get lunch today?
+  - Do you have the phone numbers of the people who went missing?
+  - Any places we should avoid specifically?
+  - What store do you get your clothing from?
+  - What kind of bunker do you think would be good for a situation like this?
+  Q2response3s:
+  - What is your opinion on the rest of the townspeople?
+  - Do you want to get kidnapped?
+  - What water source do they go to?
+  - Have you had any run-ins with any of the monsters?
+  - Are you free Saturday?
+  intro_quest: 
+  intro: 
+  Q1response1: 
+  Q1response2: 
+  Q1response3: 
+  Q2response1: 
+  Q2response2: 
+  Q2response3: 
+  fail: 
+  win1: 
+  win2: 
+  answer1: 0
+  answer2: 0
+  inQuest: 0
+  q1: 0
+  q2: 0
+  response: 0

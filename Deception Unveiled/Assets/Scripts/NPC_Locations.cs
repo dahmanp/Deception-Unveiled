@@ -6,7 +6,7 @@ using TMPro;
 
 public enum LocQuest
 {
-    quest1, quest2, quest3, quest4, quest5//, quest6, quest7, quest8, quest9, quest10
+    quest1, quest2, quest3, quest4, quest5
 }
 
 public class NPC_Locations : MonoBehaviour
@@ -20,6 +20,7 @@ public class NPC_Locations : MonoBehaviour
     public string[] intros;
     public string[] fails;
     public string[] wins;
+    public string[] hints;
     public int[] answers;
 
     public int response = 0;
@@ -28,8 +29,14 @@ public class NPC_Locations : MonoBehaviour
     public int answer;
     public string fail;
     public string win;
+    public string hint;
 
     public bool inQuest = false;
+
+    void Start()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
 
     void Update()
     {
@@ -40,9 +47,9 @@ public class NPC_Locations : MonoBehaviour
         }
         if (inQuest==true && response!=0)
         {
-            //Debug.Log("testing");
             check();
             response = 0;
+            //open the button menu
         }
     }
 
@@ -69,6 +76,7 @@ public class NPC_Locations : MonoBehaviour
         win = wins[i];
         fail = fails[i];
         answer = answers[i];
+        hint = hints[i];
     }
 
     void typeSwitch()
@@ -93,26 +101,6 @@ public class NPC_Locations : MonoBehaviour
         {
             setDialogue(4);
         }
-        /*else if (quest == LocQuest.quest6)
-        {
-            setDialogue(5);
-        }
-        else if (quest == LocQuest.quest7)
-        {
-            setDialogue(6);
-        }
-        else if (quest == LocQuest.quest8)
-        {
-            setDialogue(7);
-        }
-        else if (quest == LocQuest.quest9)
-        {
-            setDialogue(8);
-        }
-        else if (quest == LocQuest.quest10)
-        {
-            setDialogue(9);
-        }*/
     }
 
     void start()
@@ -121,9 +109,16 @@ public class NPC_Locations : MonoBehaviour
         player.inspectText.SetActive(true);
         player.buttons.SetActive(true);
         inQuest = true;
+
+        if (player.investigationHints > 0)
+        {
+            player.hintText.text = hint;
+            player.hintScreen.SetActive(true);
+            player.investigationHints--;
+        }
     }
 
-    void check()
+    public void check()
     {
         if (response == answer)
         {
@@ -133,8 +128,8 @@ public class NPC_Locations : MonoBehaviour
             inQuest = false;
             player.questsCompleted++;
             player.questEndWin = true;
-            player.curSpace--;
-            player.sortArray(player.inventory);
+
+            boxCollider.enabled = false;
         } else
         {
             player.desc.text = fail;
@@ -143,6 +138,8 @@ public class NPC_Locations : MonoBehaviour
             inQuest = false;
             player.questsFailed++;
             player.questEndFail = true;
+
+            boxCollider.enabled = false;
         }
     }
 }
