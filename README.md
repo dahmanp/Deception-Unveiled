@@ -1,15 +1,22 @@
 # Deception Unveiled
  
 Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
-
 - F - interact with  locations
 - E - interact with NPCs, Collect Objects
 - Q - inspect Objects
 - WASD - movement
 
-Changes:
-- prototype item quest complete
-- prototype location quest complete
-- prototype inventory optimization complete
-- prototype UI added
-- prototype rest period added (no functionality for Detective options, though there are counters)
+What's New:
+- prototype interview / interrogation quest complete
+- updated interaction ui (for all interactable objects)
+- fixed item inventory
+- fixed rest period ui
+- detective hints in rest period are now functional
+- added the final detective rest period option
+
+What's next:
+- NPC duplicates & random spawn (issues with more than one object)
+- Item random spawn
+- puzzles for item investigation and location inspection (non-quest)
+- starting cutscene (maybe)
+- ending sequence (maybe)
