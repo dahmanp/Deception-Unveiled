@@ -126,9 +126,9 @@ public class RestPeriod : MonoBehaviour
         SetScreen(winTransitionPage);
     }
 
-    public void D_BLANK()
+    public void D_hintInterview()
     {
-        //idk yet
+        player.interviewHints++;
         SetScreen(winTransitionPage);
     }
 }

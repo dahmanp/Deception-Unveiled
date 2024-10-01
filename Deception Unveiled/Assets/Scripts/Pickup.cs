@@ -33,6 +33,7 @@ public class Pickup : MonoBehaviour
             inRange = true;
         }
         player.interactText.SetActive(true);
+        player.text_interactText.text = "E to Collect         Q to Investigate";
     }
 
     void OnTriggerExit2D(Collider2D collision)

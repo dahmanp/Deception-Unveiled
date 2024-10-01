@@ -14,6 +14,7 @@ public class NPC_Locations : MonoBehaviour
     private PlayerController player;
     private bool inRange = false;
     public LocQuest quest;
+    public GameObject interact;
 
     private BoxCollider2D boxCollider;
 
@@ -60,6 +61,7 @@ public class NPC_Locations : MonoBehaviour
         {
             inRange = true;
         }
+        interact.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -68,6 +70,7 @@ public class NPC_Locations : MonoBehaviour
         {
             inRange = false;
         }
+        interact.SetActive(false);
     }
 
     void setDialogue(int i)
@@ -109,6 +112,7 @@ public class NPC_Locations : MonoBehaviour
         player.inspectText.SetActive(true);
         player.buttons.SetActive(true);
         inQuest = true;
+        interact.SetActive(false);
 
         if (player.investigationHints > 0)
         {
@@ -125,21 +129,23 @@ public class NPC_Locations : MonoBehaviour
             player.desc.text = win;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
+            player.hintScreen.SetActive(false);
             inQuest = false;
             player.questsCompleted++;
             player.questEndWin = true;
 
-            boxCollider.enabled = false;
+            this.enabled = false;
         } else
         {
             player.desc.text = fail;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
+            player.hintScreen.SetActive(false);
             inQuest = false;
             player.questsFailed++;
             player.questEndFail = true;
 
-            boxCollider.enabled = false;
+            this.enabled = false;
         }
     }
 }

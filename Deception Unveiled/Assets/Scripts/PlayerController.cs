@@ -21,9 +21,11 @@ public class PlayerController : MonoBehaviour
 
     //I WANT THE FOLLOWING PUT INTO GAMEMANAGER BUT IT NO NO WANNA WORK RIGHT NOW
     public GameObject interactText;
+    public TMP_Text text_interactText;
     public GameObject inspectText;
     public TMP_Text desc;
     public GameObject buttons;
+    public GameObject buttonsInt;
     public GameObject exitButton;
     public GameObject invScreen;
     public TMP_Text hintText;
@@ -85,7 +87,6 @@ public class PlayerController : MonoBehaviour
     {
         locInventory[locationSpace] = locationDesc;
         locationSpace++;
-        //add a way to make sure there are no duplicates
         // i want this put into a journal of sorts in the order you recieve them
     }
 

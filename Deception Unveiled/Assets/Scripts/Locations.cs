@@ -47,6 +47,8 @@ public class Locations : MonoBehaviour
         {
             inRange = true;
         }
+        player.interactText.SetActive(true);
+        player.text_interactText.text = "F to Investigate";
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -55,6 +57,8 @@ public class Locations : MonoBehaviour
         {
             inRange = false;
         }
+        player.interactText.SetActive(false);
+        player.inspectText.SetActive(false);
     }
 
     void typeSwitch()

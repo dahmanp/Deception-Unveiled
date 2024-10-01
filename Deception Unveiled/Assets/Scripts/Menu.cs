@@ -78,6 +78,14 @@ public class Menu : MonoBehaviour
         player.hintScreen.SetActive(false);
     }
 
+    public void acceptQuestinterview()
+    {
+        player.inspectText.SetActive(false);
+        player.buttonsInt.SetActive(false);
+        player.hintScreen.SetActive(false);
+        intnpc.accepted = true;
+    }
+
     public void rejectQuest()
     {
         player.inspectText.SetActive(false);

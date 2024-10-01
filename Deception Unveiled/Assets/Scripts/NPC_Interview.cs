@@ -15,6 +15,7 @@ public class NPC_Interview : MonoBehaviour
     private bool inRange = false;
     public InterviewQuest quest;
     private BoxCollider2D boxCollider;
+    public GameObject interact;
 
     public string[] intro_quests;
     public string[] intros;
@@ -27,6 +28,8 @@ public class NPC_Interview : MonoBehaviour
     public string[] Q2response1s;
     public string[] Q2response2s;
     public string[] Q2response3s;
+    public string[] hint1s;
+    public string[] hint2s;
 
     public string intro_quest;
     public string intro;
@@ -39,10 +42,13 @@ public class NPC_Interview : MonoBehaviour
     public string fail;
     public string win1;
     public string win2;
+    public string hint1;
+    public string hint2;
 
     public int answer1;
     public int answer2;
 
+    public bool accepted = false;
     public bool inQuest = false;
     public bool q1 = false;
     public bool q2 = false;
@@ -64,6 +70,22 @@ public class NPC_Interview : MonoBehaviour
                 start();
             }
         }
+        if (accepted == true)
+        {
+            player.question.text = intro;
+            player.answer1.text = Q1response1;
+            player.answer2.text = Q1response2;
+            player.answer3.text = Q1response3;
+            player.quiz.SetActive(true);
+
+            if (player.interviewHints > 0)
+            {
+                player.hintText.text = hint1;
+                player.hintScreen.SetActive(true);
+                player.interviewHints--;
+            }
+            accepted = false;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -74,6 +96,7 @@ public class NPC_Interview : MonoBehaviour
             player = potentialPlayer;
             inRange = true;
         }
+        interact.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -83,6 +106,7 @@ public class NPC_Interview : MonoBehaviour
             inRange = false;
             player = null;
         }
+        interact.SetActive(false);
     }
 
     void setDialogue(int i)
@@ -98,6 +122,8 @@ public class NPC_Interview : MonoBehaviour
         fail = fails[i];
         win1 = win1s[i];
         win2 = win2s[i];
+        hint1 = hint1s[i];
+        hint2 = hint2s[i];
     }
 
     public void typeSwitch()
@@ -141,19 +167,12 @@ public class NPC_Interview : MonoBehaviour
             Debug.Log("start Error");
             return;
         }
+        interact.SetActive(false);
 
-        player.question.text = intro;
-        player.answer1.text = Q1response1;
-        player.answer2.text = Q1response2;
-        player.answer3.text = Q1response3;
-        player.quiz.SetActive(true);
-
-        if (player.interviewHints > 0)
-        {
-            //player.hintText.text = hint;
-            player.hintScreen.SetActive(true);
-            player.interviewHints--;
-        }
+        player.desc.text = intro_quest;
+        player.inspectText.SetActive(true);
+        player.buttonsInt.SetActive(true);
+        inQuest = true;
     }
 
     public void check()
@@ -167,6 +186,12 @@ public class NPC_Interview : MonoBehaviour
             response = 0;
             q1 = true;
             q2 = true;
+            if (player.interviewHints > 0)
+            {
+                player.hintText.text = hint2;
+                player.hintScreen.SetActive(true);
+                player.interviewHints--;
+            }
         }
         else if (response == answer2 && q2 == true)
         {
@@ -174,6 +199,7 @@ public class NPC_Interview : MonoBehaviour
             player.desc.text = win2;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
+            player.hintScreen.SetActive(false);
             q2 = false;
             q1 = false;
             player.questsCompleted++;
@@ -187,6 +213,7 @@ public class NPC_Interview : MonoBehaviour
             player.desc.text = fail;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
+            player.hintScreen.SetActive(false);
             player.questsFailed++;
             player.questEndFail = true;
 
