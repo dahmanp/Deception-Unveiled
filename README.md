@@ -16,6 +16,7 @@ What's New:
 
 What's next:
 - NPC duplicates & random spawn (issues with more than one object)
+- fix UI (locations) (don't disappear after interacating)
 - Item random spawn
 - puzzles for item investigation and location inspection (non-quest)
 - starting cutscene (maybe)
