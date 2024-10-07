@@ -203,6 +203,7 @@ public class NPC_Interview : MonoBehaviour
             q2 = false;
             q1 = false;
             player.questsCompleted++;
+            player.totalQuests++;
             player.questEndWin = true;
 
             this.enabled = false;
@@ -215,6 +216,7 @@ public class NPC_Interview : MonoBehaviour
             player.exitButton.SetActive(true);
             player.hintScreen.SetActive(false);
             player.questsFailed++;
+            player.totalQuests++;
             player.questEndFail = true;
 
             this.enabled = false;

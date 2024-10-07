@@ -2,11 +2,16 @@
 
 //General
 //- location interaction
-    //- opt to select this location for the quest
     //- puzzle of some sort to get the right info
-//- interrogation
-    //- answer the questions / say the right things
-//- make the hints do something
+//- item interaction
+    //- puzzle of some sort to get the right info
+//- generation / randomization:
+    //- spawn 10 random npcs
+    //- randomiza the item locations
+//- start sequence
+    //- an introduction to the story
+//- end sequence
+    //- the ending to the story
 
 //Art
 //- MC design

@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
 
     public int questsCompleted;
     public int questsFailed;
+    public int totalQuests;
     public bool questEndFail = false;
     public bool questEndWin = false;
 
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
     public Image[] itemInvSlots;
     public Sprite[] itemSprites;
+
+    private static PlayerController instance;
 
     void Update()
     {

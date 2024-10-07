@@ -34,9 +34,8 @@ public class Locations : MonoBehaviour
             } else if (npcLoc.inQuest == true)
             {
                 typeSwitch();
-                //option, do you want to choose this for your answer?
-                //button popup, and if selected it then allows you to select the option
             }
+            player.interactText.SetActive(false);
         }
     }
 
@@ -127,9 +126,8 @@ public class Locations : MonoBehaviour
 
     public void check(int i)
     {
-        //check this in the menu script
         npcLoc.response = i;
-        DescribeLocationBad();
+        //DescribeLocationBad();
         if (collected==false)
         {
             player.addLocation(goodDesc);

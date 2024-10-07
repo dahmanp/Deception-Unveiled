@@ -181,8 +181,11 @@ public class NPC : MonoBehaviour
             player.exitButton.SetActive(true);
             player.invScreen.SetActive(false);
             player.hintScreen.SetActive(false);
+
             inQuest = false;
+
             player.questsCompleted++;
+            player.totalQuests++;
             player.questEndWin = true;
             player.curSpace--;
             if (player.curSpace < 0) {
@@ -201,6 +204,7 @@ public class NPC : MonoBehaviour
             player.hintScreen.SetActive(false);
             inQuest = false;
             player.questsFailed++;
+            player.totalQuests++;
             player.questEndFail = true;
 
             this.enabled = false;

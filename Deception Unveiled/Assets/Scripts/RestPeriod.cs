@@ -12,6 +12,7 @@ public class RestPeriod : MonoBehaviour
 
     public GameObject prefab;
 
+    public GameObject playerObj;
     private PlayerController player;
     private Menu menu;
 
@@ -23,7 +24,7 @@ public class RestPeriod : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = playerObj.GetComponent<PlayerController>();
     }
 
     void SetScreen(GameObject screen)

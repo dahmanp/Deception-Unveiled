@@ -19,7 +19,6 @@ public class Menu : MonoBehaviour
         intnpc = FindObjectOfType<NPC_Interview>();
     }
 
-    //DO NOT CHANGE PLEASEPLEASE
     public void selectObject(int i)
     {
         if (player.inventory[i] != 0)

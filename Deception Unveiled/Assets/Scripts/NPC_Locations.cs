@@ -132,6 +132,7 @@ public class NPC_Locations : MonoBehaviour
             player.hintScreen.SetActive(false);
             inQuest = false;
             player.questsCompleted++;
+            player.totalQuests++;
             player.questEndWin = true;
 
             this.enabled = false;
@@ -143,6 +144,7 @@ public class NPC_Locations : MonoBehaviour
             player.hintScreen.SetActive(false);
             inQuest = false;
             player.questsFailed++;
+            player.totalQuests++;
             player.questEndFail = true;
 
             this.enabled = false;
