@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
     public int[] inventory;
     public string[] locInventory;
 
+    public NPC npc;
+    public NPC_Locations locnpc;
+    public NPC_Interview intnpc;
+
+    public bool playerInQuest = false;
+
     //I WANT THE FOLLOWING PUT INTO GAMEMANAGER BUT IT NO NO WANNA WORK RIGHT NOW
     public GameObject interactText;
     public TMP_Text text_interactText;

@@ -67,7 +67,14 @@ public class NPC_Interview : MonoBehaviour
         {
             if (inQuest == false)
             {
-                start();
+                if (player.playerInQuest == false)
+                {
+                    start();
+                }
+                else
+                {
+                    Debug.Log("In a quest already!");
+                }
             }
         }
         if (accepted == true)
@@ -162,6 +169,8 @@ public class NPC_Interview : MonoBehaviour
 
     public void start()
     {
+        player.playerInQuest = true;
+        player.intnpc = this;
         if (player == null)
         {
             Debug.Log("start Error");
@@ -205,6 +214,7 @@ public class NPC_Interview : MonoBehaviour
             player.questsCompleted++;
             player.totalQuests++;
             player.questEndWin = true;
+            player.playerInQuest = false;
 
             this.enabled = false;
         }
@@ -218,6 +228,7 @@ public class NPC_Interview : MonoBehaviour
             player.questsFailed++;
             player.totalQuests++;
             player.questEndFail = true;
+            player.playerInQuest = false;
 
             this.enabled = false;
         }

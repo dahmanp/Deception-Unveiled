@@ -18,10 +18,18 @@ public class InteractStart : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
-            npc.enabled = true;
-            npc.typeSwitch();
-            npc.start();
-            this.enabled = false;
+            if (player.playerInQuest == false)
+            {
+                npc.enabled = true;
+                npc.typeSwitch();
+                npc.start();
+                this.enabled = false;
+                player.playerInQuest = true;
+            } else
+            {
+                //activate - you are already in a quest!
+                Debug.Log("In a quest already!");
+            }
         }
     }
 

@@ -11,7 +11,9 @@ public enum ItemQuest
 
 public class NPC : MonoBehaviour
 {
+    [SerializeField]
     private PlayerController player;
+
     private bool inRange = false;
     public ItemQuest quest;
     private BoxCollider2D boxCollider;
@@ -128,6 +130,8 @@ public class NPC : MonoBehaviour
 
     public void start()
     {
+        player.playerInQuest = true;
+        player.npc = this;
         if (player == null)
         {
             Debug.Log("start Error");
@@ -160,6 +164,7 @@ public class NPC : MonoBehaviour
 
     public void check()
     {
+        Debug.Log(player);
         if (player == null)
         {
             //the error is here
@@ -192,6 +197,7 @@ public class NPC : MonoBehaviour
                 player.curSpace = 0;
             }
             player.sortArray(player.inventory);
+            player.playerInQuest = false;
 
             this.enabled = false;
         } else
@@ -206,6 +212,7 @@ public class NPC : MonoBehaviour
             player.questsFailed++;
             player.totalQuests++;
             player.questEndFail = true;
+            player.playerInQuest = false;
 
             this.enabled = false;
         }

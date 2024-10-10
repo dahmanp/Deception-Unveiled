@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject intro;
 
     private bool inCutscene;
+    //consider: after rest period, you enter a dream sequence? maybe you walk around the town at night and the shapeshifter chases you? a later thing
 
     void Awake()
     {
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
         //inCutscene = true;
         player = playerObj.GetComponent<PlayerController>();
         startCutscene();
-        //spawnNPCS(selection); // this works to spawn enemies but the npcs dont work so i am disabling temporarily
+        spawnNPCS(selection);
         spawnItems(selection);
     }
 

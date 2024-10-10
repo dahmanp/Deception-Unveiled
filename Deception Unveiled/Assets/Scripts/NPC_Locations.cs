@@ -44,7 +44,13 @@ public class NPC_Locations : MonoBehaviour
         typeSwitch();
         if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
-            start();
+            if (player.playerInQuest == false)
+            {
+                start();
+            } else
+            {
+                Debug.Log("In a quest already!");
+            }
         }
         if (inQuest==true && response!=0)
         {
@@ -108,6 +114,8 @@ public class NPC_Locations : MonoBehaviour
 
     void start()
     {
+        player.playerInQuest = true;
+        player.locnpc = this;
         player.desc.text = intro;
         player.inspectText.SetActive(true);
         player.buttons.SetActive(true);
@@ -134,6 +142,7 @@ public class NPC_Locations : MonoBehaviour
             player.questsCompleted++;
             player.totalQuests++;
             player.questEndWin = true;
+            player.playerInQuest = false;
 
             this.enabled = false;
         } else
@@ -146,6 +155,7 @@ public class NPC_Locations : MonoBehaviour
             player.questsFailed++;
             player.totalQuests++;
             player.questEndFail = true;
+            player.playerInQuest = false;
 
             this.enabled = false;
         }

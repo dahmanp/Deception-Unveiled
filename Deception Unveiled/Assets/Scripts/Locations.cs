@@ -17,21 +17,19 @@ public class Locations : MonoBehaviour
 
     public bool collected = false;
 
-    private NPC_Locations npcLoc;
-
     void Start()
     {
-        npcLoc = FindObjectOfType<NPC_Locations>();
+        player = FindObjectOfType<PlayerController>();
     }
 
     void Update()
     {
         if (inRange == true && Input.GetKeyDown(KeyCode.F))
         {
-            if (npcLoc.inQuest == false)
+            if (player.locnpc.inQuest == false)
             {
                 DescribeLocationGood();
-            } else if (npcLoc.inQuest == true)
+            } else if (player.locnpc.inQuest == true)
             {
                 typeSwitch();
             }
@@ -126,7 +124,7 @@ public class Locations : MonoBehaviour
 
     public void check(int i)
     {
-        npcLoc.response = i;
+        player.locnpc.response = i;
         //DescribeLocationBad();
         if (collected==false)
         {
