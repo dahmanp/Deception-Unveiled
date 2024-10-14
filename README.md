@@ -7,12 +7,16 @@ Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
 - WASD - movement
 
 What's New:
-- NPC random spawn (not shown, duplicate npcs are still broken)
-- fix UI (locations) (don't disappear after interacating)
-- Item random spawn
+- shows your current objective
+- shows the day you are currently on
+- journal feature, allows you to check the items you have collected,
+  the locations you have explored, and your quest stats
+- NPC random spawn & npc duplicates
+- fixed location UI
 
 What's next:
-- NPC duplicates
 - puzzles for item investigation and location inspection (non-quest)
-- starting cutscene (maybe)
-- ending sequence (maybe)
+- Interview inventory logging
+- main menu
+- art assets (character walk sprite)
+- character and npc images in quests
