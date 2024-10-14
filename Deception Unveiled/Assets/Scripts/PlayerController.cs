@@ -43,6 +43,9 @@ public class PlayerController : MonoBehaviour
     public TMP_Text answer2;
     public TMP_Text answer3;
 
+    public TMP_Text dateTime;
+    public TMP_Text objective;
+
     public int questsCompleted;
     public int questsFailed;
     public int totalQuests;
@@ -67,6 +70,10 @@ public class PlayerController : MonoBehaviour
         sortArray(inventory);
         if (curSpace < 0) {
             curSpace = 0;
+        }
+        if (playerInQuest == false)
+        {
+            objective.text = "Talk to someone around the town of Whispering Pines.";
         }
     }
 

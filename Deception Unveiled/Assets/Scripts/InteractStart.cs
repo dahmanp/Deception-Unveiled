@@ -27,7 +27,6 @@ public class InteractStart : MonoBehaviour
                 player.playerInQuest = true;
             } else
             {
-                //activate - you are already in a quest!
                 Debug.Log("In a quest already!");
             }
         }

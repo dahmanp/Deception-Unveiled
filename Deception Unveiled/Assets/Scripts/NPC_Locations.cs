@@ -23,6 +23,7 @@ public class NPC_Locations : MonoBehaviour
     public string[] wins;
     public string[] hints;
     public int[] answers;
+    public string[] objectives;
 
     public int response = 0;
 
@@ -56,7 +57,6 @@ public class NPC_Locations : MonoBehaviour
         {
             check();
             response = 0;
-            //open the button menu
         }
     }
 
@@ -86,6 +86,7 @@ public class NPC_Locations : MonoBehaviour
         fail = fails[i];
         answer = answers[i];
         hint = hints[i];
+        //player.objective.text = objectives[i];
     }
 
     void typeSwitch()

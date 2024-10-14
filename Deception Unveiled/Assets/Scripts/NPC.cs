@@ -24,6 +24,7 @@ public class NPC : MonoBehaviour
     public string[] wins;
     public string[] hints;
     public int[] answers;
+    public string[] objectives;
 
     public string intro;
     public int answer;
@@ -82,6 +83,8 @@ public class NPC : MonoBehaviour
         fail = fails[i];
         answer = answers[i];
         hint = hints[i];
+        player.objective.text = objectives[i];
+
     }
 
     public void typeSwitch()
@@ -167,7 +170,6 @@ public class NPC : MonoBehaviour
         Debug.Log(player);
         if (player == null)
         {
-            //the error is here
             Debug.Log("check (player) Error");
             return;
         }
@@ -176,11 +178,12 @@ public class NPC : MonoBehaviour
             Debug.Log("check (inquest) Error");
             return;
         }
+        //Debug.Log(answer);
+        //Debug.Log(response);
 
         if (response == answer)
         {
             //Debug.Log("correct");
-            Debug.Log(win);
             player.desc.text = win;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);

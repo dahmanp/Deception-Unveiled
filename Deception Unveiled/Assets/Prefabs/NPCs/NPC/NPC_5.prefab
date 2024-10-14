@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f085a28eddb44fb56f57c933ee4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   quest: 4
   interact: {fileID: 2984480962737410276}
   intros:
@@ -224,6 +225,17 @@ MonoBehaviour:
   - They say there are fragmented thoughts somewhere, revealing unsettling insights
     about a mind unravelling.
   answers: 0a000000060000000900000005000000040000000200000008000000030000000700000001000000
+  objectives:
+  - Find a rare gemstone in Whispering Pines.
+  - Locate the missing book somewhere in town.
+  - Discover a personal item belonging to the missing daughter.
+  - Gather the town's talk and report back.
+  - Discover what the strange whispers are saying.
+  - Find a clue to help track down the monstrous creatures in the forest.
+  - Locate the source of the rattling metal sounds.
+  - Find something interesting that can be used as a tattoo design.
+  - Search for food to help feed the starving dog.
+  - "Find the deceased doctor\u2019s notes hidden around town."
   intro: 
   answer: 0
   fail: 

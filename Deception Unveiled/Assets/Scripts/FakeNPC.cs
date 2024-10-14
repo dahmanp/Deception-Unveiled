@@ -14,6 +14,7 @@ public class FakeNPC : MonoBehaviour
         if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
             player.questsFailed++;
+            player.totalQuests++;
             Destroy(gameObject);
         }
     }

@@ -11,6 +11,7 @@ public class Locations : MonoBehaviour
 {
     public LocationType type;
     private PlayerController player;
+    private Menu menu;
     private bool inRange = false;
     public string badDesc;
     public string goodDesc;
@@ -20,15 +21,18 @@ public class Locations : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        menu = FindObjectOfType<Menu>();
     }
 
     void Update()
     {
         if (inRange == true && Input.GetKeyDown(KeyCode.F))
         {
-            if (player.locnpc.inQuest == false)
+            if (player.locnpc == null || player.locnpc.inQuest == false)
             {
                 DescribeLocationGood();
+                player.addLocation(goodDesc);
+                menu.locList[menu.numLoc].text = goodDesc;
             } else if (player.locnpc.inQuest == true)
             {
                 typeSwitch();
@@ -128,7 +132,10 @@ public class Locations : MonoBehaviour
         //DescribeLocationBad();
         if (collected==false)
         {
+            Debug.Log(menu);
             player.addLocation(goodDesc);
+            menu.locList[menu.numLoc].text = goodDesc;
+            menu.numLoc++;
         }
     }
 }

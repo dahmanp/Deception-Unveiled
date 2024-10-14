@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public GameObject barrier;
     private int selection; //number corresponds to an assortment
 
+    //set sprite in this one mayhaps - there will be 10 total, with 1 neutral, 1 angry, and 1 happy
+    //maybe keep a log, and just go through the array (first quest you look at starts the array at 0)
+
     [Header("Screens")]
     public GameObject intro;
 

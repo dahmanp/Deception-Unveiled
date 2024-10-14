@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RestPeriod : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class RestPeriod : MonoBehaviour
     public GameObject winTransitionPage;
     public GameObject restPeriodIntro;
     public GameObject selectOption;
+
+    public TMP_Text dateAndTime;
+    public int day = 1;
+    public TMP_Text failStat;
+    public TMP_Text winStat;
+    public TMP_Text totalStat;
 
     public GameObject prefab;
 
@@ -39,6 +46,8 @@ public class RestPeriod : MonoBehaviour
 
     void Update()
     {
+        //for some reason it isnt logging whether you win or lose, it just goes to the win screen
+        // sometimes it works???? idk lol
         if (player.winRest == true)
         {
             canvas.SetActive(true);
@@ -67,6 +76,13 @@ public class RestPeriod : MonoBehaviour
         failTransitionPage.SetActive(false);
         restPeriodIntro.SetActive(false);
         selectOption.SetActive(false);
+
+        day++;
+        dateAndTime.text = "Day " + day + ", Morning.";
+
+        totalStat.text = "Total Quests: " + player.totalQuests;
+        failStat.text = "Quests Failed: " + player.questsFailed;
+        winStat.text = "Quests Won: " + player.questsCompleted;
     }
 
 
@@ -109,6 +125,7 @@ public class RestPeriod : MonoBehaviour
     {
         //Debug.Log("AUTOFAIL");
         player.questsFailed++;
+        player.totalQuests++;
     }
 
 

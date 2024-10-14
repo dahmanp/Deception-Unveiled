@@ -11,8 +11,14 @@ public class Pickup : MonoBehaviour
 {
     public PickupType type;
     private PlayerController player;
+    private Menu menu;
     private bool inRange = false;
     public string description;
+
+    void Start()
+    {
+        menu = FindObjectOfType<Menu>();
+    }
 
     void Update()
     {
@@ -102,6 +108,8 @@ public class Pickup : MonoBehaviour
         {
             //Debug.Log("Added to inventory!");
             player.addItem(i);
+            menu.itemList[menu.numItems].text = description;
+            menu.numItems++;
             Destroy(gameObject);
             player.inspectText.SetActive(false);
         } else

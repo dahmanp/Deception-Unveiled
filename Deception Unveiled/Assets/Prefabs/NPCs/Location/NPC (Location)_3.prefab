@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41802e5c1def904d8ec876c3784b155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: 1
+  quest: 2
   interact: {fileID: 4547616589116480583}
   intros:
   - "Hello. I hear you are trying to solve the mysteries behind the recent disappearances.
@@ -426,6 +426,15 @@ MonoBehaviour:
     and lively."
   - Explore the misty resting place filled with mossy stones; it has an eerie atmosphere.
   answers: 0a00000004000000090000000600000002000000
+  objectives:
+  - "Explore the town\u2019s abandoned buildings for clues about the recent disappearances."
+  - Investigate areas filled with dense shadows and nature to learn more about the
+    strange creatures.
+  - Find the rumored creepy building at the edge of town for potential answers.
+  - Head to the nearby forest known for its eerie sounds to uncover secrets about
+    your investigation.
+  - Locate the area where strange sounds of rattling bones and moving stones have
+    been heard.
   response: 0
   intro: 
   answer: 0

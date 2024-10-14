@@ -7,19 +7,74 @@ using TMPro;
 public class Menu : MonoBehaviour
 {
     private PlayerController player;
-    // make public, set npc while interacting
-    // playercontroller variables, npc send to playercontroller, which then sends to menu
-    // satic variables below?
-    // menu finds all npcs in the scene, find objects put into an array, when interacting set a flag
-
-    //ITEM QUESTS WORK. FIX INTERVIEW AND LOCATION QUESTS
     public NPC npc;
     public NPC_Locations locnpc;
     public NPC_Interview intnpc;
 
+    public GameObject journalScreen;
+    public GameObject[] screens;
+    public int currScreen;
+
+    public TMP_Text[] itemList;
+    public int numItems;
+    public TMP_Text[] locList;
+    public int numLoc;
+    public TMP_Text[] intList;
+    public int numInt;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+    }
+
+    public void openJournal()
+    {
+        journalScreen.SetActive(true);
+        currScreen = 0;
+        screens[0].SetActive(true);
+        screens[1].SetActive(false);
+        screens[2].SetActive(false);
+        screens[3].SetActive(false);
+    }
+
+    public void closeJournal()
+    {
+        journalScreen.SetActive(false);
+    }
+
+    public void leftButton()
+    {
+        if (currScreen <= 0)
+        {
+            Debug.Log("Already at leftmost screen!");
+            if (currScreen < 0)
+            {
+                currScreen = 0;
+            }
+        } else
+        {
+            screens[currScreen].SetActive(false);
+            currScreen--;
+            screens[currScreen].SetActive(true);
+        }
+    }
+
+    public void rightButton()
+    {
+        if (currScreen >= 3)
+        {
+            Debug.Log("Already at rightmost screen!");
+            if (currScreen > 3)
+            {
+                currScreen = 3;
+            }
+        }
+        else
+        {
+            screens[currScreen].SetActive(false);
+            currScreen++;
+            screens[currScreen].SetActive(true);
+        }
     }
 
     public void selectObject(int i)
@@ -97,8 +152,10 @@ public class Menu : MonoBehaviour
 
     public void rejectQuest()
     {
+        player.playerInQuest = false;
         player.inspectText.SetActive(false);
         player.buttons.SetActive(false);
         player.questsFailed++;
+        player.totalQuests++;
     }
 }
