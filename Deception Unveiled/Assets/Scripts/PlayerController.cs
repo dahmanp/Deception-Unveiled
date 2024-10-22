@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public GameObject buttonsInt;
     public GameObject exitButton;
     public GameObject invScreen;
+    public GameObject charaImages;
     public TMP_Text hintText;
     public GameObject hintScreen;
     public GameObject locQuestButtons;
@@ -103,7 +104,6 @@ public class PlayerController : MonoBehaviour
     {
         locInventory[locationSpace] = locationDesc;
         locationSpace++;
-        // i want this put into a journal of sorts in the order you recieve them
     }
 
     public int[] sortArray(int[] array)

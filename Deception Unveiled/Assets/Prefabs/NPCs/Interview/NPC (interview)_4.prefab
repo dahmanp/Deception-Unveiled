@@ -262,6 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: 3
   interact: {fileID: 9051120734082785038}
+  image_id: 0
+  groundImage: {fileID: 8951467014621211104}
   intro_quests:
   - "I\u2019m sorry you arrived here when the mood is so gloomy. Maybe we can do
     something to brighten the mood? Ask someone in town if there is something that

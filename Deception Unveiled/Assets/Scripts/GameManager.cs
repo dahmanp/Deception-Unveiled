@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,21 @@ public class GameManager : MonoBehaviour
     public GameObject[] items_surface;
     public GameObject[] items_deepEnd;
 
+    [Header("NPC UI")]
+    public Sprite[] angry;
+    public Sprite[] happy;
+    public Sprite[] neutral;
+    public Image npc_image;
+
+    [Header("NPC Images")]
+    public Sprite[] npc_sprites;
+
+    [Header("MC UI")]
+    public Sprite sad_mc;
+    public Sprite happy_mc;
+    public Sprite neutral_mc;
+    public Image image_mc;
+
     [Header("Misc")]
     public GameObject barrier;
     private int selection; //number corresponds to an assortment
@@ -36,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        image_mc.sprite = neutral_mc;
         instance = this;
         selection = Random.Range(0, 4);
         //inCutscene = true;
@@ -78,18 +95,20 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < surfaceNPC_index[npcInterval].Length; i++)
         {
+            GameObject npcInLine;
             if (i < 3)
             {
-                Instantiate(NPC_Prefabs[surfaceNPC_index[npcInterval][i]], npcLocations[surfaceLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
+                npcInLine = Instantiate(NPC_Prefabs[surfaceNPC_index[npcInterval][i]], npcLocations[surfaceLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
             }
             else if (i == 3)
             {
-                Instantiate(NPC_Location_Prefabs[surfaceNPC_index[npcInterval][i]], npcLocations[surfaceLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
+                npcInLine = Instantiate(NPC_Location_Prefabs[surfaceNPC_index[npcInterval][i]], npcLocations[surfaceLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
             }
             else
             {
-                Instantiate(NPC_Interview_Prefabs[surfaceNPC_index[npcInterval][i]], npcLocations[surfaceLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
+                npcInLine = Instantiate(NPC_Interview_Prefabs[surfaceNPC_index[npcInterval][i]], npcLocations[surfaceLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
             }
+            SetImageId(npcInLine, i);
         }
 
         //Deep End
@@ -111,18 +130,44 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < deepEndNPC_index[npcInterval].Length; i++)
         {
+            GameObject npcInLine;
             if (i < 3)
             {
-                Instantiate(NPC_Prefabs[deepEndNPC_index[npcInterval][i]], npcLocations[deepEndLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
+                npcInLine = Instantiate(NPC_Prefabs[deepEndNPC_index[npcInterval][i]], npcLocations[deepEndLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
             }
             else if (i == 3)
             {
-                Instantiate(NPC_Location_Prefabs[deepEndNPC_index[npcInterval][i]], npcLocations[deepEndLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
+                npcInLine = Instantiate(NPC_Location_Prefabs[deepEndNPC_index[npcInterval][i]], npcLocations[deepEndLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
             }
             else
             {
-                Instantiate(NPC_Interview_Prefabs[deepEndNPC_index[npcInterval][i]], npcLocations[deepEndLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
+                npcInLine = Instantiate(NPC_Interview_Prefabs[deepEndNPC_index[npcInterval][i]], npcLocations[deepEndLocation_index[npcInterval][i]].transform.position, Quaternion.identity);
             }
+            SetImageId(npcInLine, i + 5);
+        }
+    }
+
+    void SetImageId(GameObject npcInLine, int id)
+    {
+        NPC npc = npcInLine.GetComponent<NPC>();
+        if (npc != null)
+        {
+            npc.image_id = id;
+            return;
+        }
+
+        NPC_Interview intnpc = npcInLine.GetComponent<NPC_Interview>();
+        if (intnpc != null)
+        {
+            intnpc.image_id = id;
+            return;
+        }
+
+        NPC_Locations locnpc = npcInLine.GetComponent<NPC_Locations>();
+        if (locnpc != null)
+        {
+            locnpc.image_id = id;
+            return;
         }
     }
 

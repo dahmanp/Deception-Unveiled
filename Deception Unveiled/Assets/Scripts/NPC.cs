@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//set an id upon instantiating, then assign ground images there
 public enum ItemQuest
 {
     quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8, quest9, quest10
@@ -13,6 +14,10 @@ public class NPC : MonoBehaviour
 {
     [SerializeField]
     private PlayerController player;
+    private GameManager gm;
+
+    public int image_id;
+    public SpriteRenderer groundImage;
 
     private bool inRange = false;
     public ItemQuest quest;
@@ -36,20 +41,37 @@ public class NPC : MonoBehaviour
 
     public int response;
 
-    void Start()
+    void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    void Start()
+    {
+        groundImage.sprite = gm.npc_sprites[image_id];
     }
 
     void Update()
     {
-        if (inRange == true && Input.GetKeyDown(KeyCode.E))
+        if (inRange && Input.GetKeyDown(KeyCode.E))
         {
             if (inQuest == false)
             {
-                start();
-            } else if (inQuest == true)
+                if (player.playerInQuest == false)
+                {
+                    typeSwitch();
+                    start();
+                    player.playerInQuest = true;
+                }
+                else
+                {
+                    Debug.Log("In a quest already!");
+                }
+            }
+            else if (inQuest == true)
             {
+                player.charaImages.SetActive(true);
                 selectOption();
             }
         }
@@ -133,6 +155,10 @@ public class NPC : MonoBehaviour
 
     public void start()
     {
+        player.charaImages.SetActive(true);
+        gm.image_mc.sprite = gm.neutral_mc;
+        gm.npc_image.sprite = gm.neutral[image_id];
+
         player.playerInQuest = true;
         player.npc = this;
         if (player == null)
@@ -167,7 +193,6 @@ public class NPC : MonoBehaviour
 
     public void check()
     {
-        Debug.Log(player);
         if (player == null)
         {
             Debug.Log("check (player) Error");
@@ -178,12 +203,12 @@ public class NPC : MonoBehaviour
             Debug.Log("check (inquest) Error");
             return;
         }
-        //Debug.Log(answer);
-        //Debug.Log(response);
 
         if (response == answer)
         {
-            //Debug.Log("correct");
+            gm.image_mc.sprite = gm.happy_mc;
+            gm.npc_image.sprite = gm.happy[image_id];
+
             player.desc.text = win;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
@@ -205,7 +230,9 @@ public class NPC : MonoBehaviour
             this.enabled = false;
         } else
         {
-            //Debug.Log("incorrect");
+            gm.image_mc.sprite = gm.sad_mc;
+            gm.npc_image.sprite = gm.angry[image_id];
+
             player.desc.text = fail;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);

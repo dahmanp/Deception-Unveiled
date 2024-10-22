@@ -12,10 +12,15 @@ public enum InterviewQuest
 public class NPC_Interview : MonoBehaviour
 {
     private PlayerController player;
+    private GameManager gm;
+    private Menu menu;
     private bool inRange = false;
     public InterviewQuest quest;
     private BoxCollider2D boxCollider;
     public GameObject interact;
+
+    public int image_id;
+    public SpriteRenderer groundImage;
 
     public string[] intro_quests;
     public string[] intros;
@@ -55,10 +60,17 @@ public class NPC_Interview : MonoBehaviour
 
     public int response;
 
-    void Start()
+    void Awake()
     {
         typeSwitch();
         boxCollider = GetComponent<BoxCollider2D>();
+        menu = FindObjectOfType<Menu>();
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    void Start()
+    {
+        groundImage.sprite = gm.npc_sprites[image_id];
     }
 
     void Update()
@@ -169,6 +181,10 @@ public class NPC_Interview : MonoBehaviour
 
     public void start()
     {
+        player.charaImages.SetActive(true);
+        gm.image_mc.sprite = gm.neutral_mc;
+        gm.npc_image.sprite = gm.neutral[image_id];
+
         player.playerInQuest = true;
         player.intnpc = this;
         if (player == null)
@@ -188,6 +204,11 @@ public class NPC_Interview : MonoBehaviour
     {
         if (response == answer1 && q1 == false)
         {
+            //add the question
+            menu.intList[menu.numInt].text = answer1 + " '" + win1 + "'";
+            menu.numInt++;
+            gm.image_mc.sprite = gm.happy_mc;
+            gm.npc_image.sprite = gm.happy[image_id];
             player.question.text = win1;
             player.answer1.text = Q2response1;
             player.answer2.text = Q2response2;
@@ -204,6 +225,11 @@ public class NPC_Interview : MonoBehaviour
         }
         else if (response == answer2 && q2 == true)
         {
+            //add the question
+            menu.intList[menu.numInt].text = answer2 + " '" + win2 + "'";
+            menu.numInt++;
+            gm.image_mc.sprite = gm.happy_mc;
+            gm.npc_image.sprite = gm.happy[image_id];
             player.quiz.SetActive(false);
             player.desc.text = win2;
             player.inspectText.SetActive(true);
@@ -220,6 +246,8 @@ public class NPC_Interview : MonoBehaviour
         }
         else
         {
+            gm.image_mc.sprite = gm.sad_mc;
+            gm.npc_image.sprite = gm.angry[image_id];
             player.quiz.SetActive(false);
             player.desc.text = fail;
             player.inspectText.SetActive(true);

@@ -12,9 +12,13 @@ public enum LocQuest
 public class NPC_Locations : MonoBehaviour
 {
     private PlayerController player;
+    private GameManager gm;
     private bool inRange = false;
     public LocQuest quest;
     public GameObject interact;
+
+    public int image_id;
+    public SpriteRenderer groundImage;
 
     private BoxCollider2D boxCollider;
 
@@ -35,18 +39,24 @@ public class NPC_Locations : MonoBehaviour
 
     public bool inQuest = false;
 
-    void Start()
+    void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    void Start()
+    {
+        groundImage.sprite = gm.npc_sprites[image_id];
     }
 
     void Update()
     {
-        typeSwitch();
         if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
             if (player.playerInQuest == false)
             {
+                typeSwitch();
                 start();
             } else
             {
@@ -86,7 +96,7 @@ public class NPC_Locations : MonoBehaviour
         fail = fails[i];
         answer = answers[i];
         hint = hints[i];
-        //player.objective.text = objectives[i];
+        player.objective.text = objectives[i];
     }
 
     void typeSwitch()
@@ -115,6 +125,10 @@ public class NPC_Locations : MonoBehaviour
 
     void start()
     {
+        player.charaImages.SetActive(true);
+        gm.image_mc.sprite = gm.neutral_mc;
+        gm.npc_image.sprite = gm.neutral[image_id];
+
         player.playerInQuest = true;
         player.locnpc = this;
         player.desc.text = intro;
@@ -135,6 +149,9 @@ public class NPC_Locations : MonoBehaviour
     {
         if (response == answer)
         {
+            gm.image_mc.sprite = gm.happy_mc;
+            gm.npc_image.sprite = gm.happy[image_id];
+
             player.desc.text = win;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);
@@ -148,6 +165,9 @@ public class NPC_Locations : MonoBehaviour
             this.enabled = false;
         } else
         {
+            gm.image_mc.sprite = gm.sad_mc;
+            gm.npc_image.sprite = gm.angry[image_id];
+
             player.desc.text = fail;
             player.inspectText.SetActive(true);
             player.exitButton.SetActive(true);

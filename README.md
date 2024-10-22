@@ -7,16 +7,13 @@ Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
 - WASD - movement
 
 What's New:
-- shows your current objective
-- shows the day you are currently on
-- journal feature, allows you to check the items you have collected,
-  the locations you have explored, and your quest stats
-- NPC random spawn & npc duplicates
-- fixed location UI
-
-What's next:
-- puzzles for item investigation and location inspection (non-quest)
 - Interview inventory logging
 - main menu
-- art assets (character walk sprite)
-- character and npc images in quests
+- sprite switching in ui for npc & main character
+- sprite switching in the map for npcs
+
+What's next:
+- map art assets
+- item art assets
+- intro cutscene / opening sequence
+- puzzles for item investigation and location inspection

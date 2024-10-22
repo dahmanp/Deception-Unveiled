@@ -363,6 +363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: 2
   interact: {fileID: 4547616589116480583}
+  image_id: 0
+  groundImage: {fileID: 8316494636824384718}
   intros:
   - "Hello. I hear you are trying to solve the mysteries behind the recent disappearances.
     If you want answers to spooky questions, I would check places that have long

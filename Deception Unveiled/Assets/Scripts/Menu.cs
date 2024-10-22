@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -40,6 +41,11 @@ public class Menu : MonoBehaviour
     public void closeJournal()
     {
         journalScreen.SetActive(false);
+    }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void leftButton()
@@ -120,6 +126,7 @@ public class Menu : MonoBehaviour
 
     public void Exit()
     {
+        player.charaImages.SetActive(false);
         player.inspectText.SetActive(false);
         player.exitButton.SetActive(false);
         player.locQuestButtons.SetActive(false);
@@ -136,6 +143,7 @@ public class Menu : MonoBehaviour
 
     public void acceptQuest()
     {
+        player.charaImages.SetActive(false);
         player.inspectText.SetActive(false);
         player.buttons.SetActive(false);
         player.hintScreen.SetActive(false);
@@ -152,9 +160,11 @@ public class Menu : MonoBehaviour
 
     public void rejectQuest()
     {
-        player.playerInQuest = false;
+        player.charaImages.SetActive(false);
         player.inspectText.SetActive(false);
         player.buttons.SetActive(false);
+        player.questEndFail = true;
+        player.playerInQuest = false;
         player.questsFailed++;
         player.totalQuests++;
     }
