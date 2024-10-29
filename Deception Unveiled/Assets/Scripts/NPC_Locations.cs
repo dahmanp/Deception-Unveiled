@@ -65,8 +65,10 @@ public class NPC_Locations : MonoBehaviour
         }
         if (inQuest==true && response!=0)
         {
-            check();
-            response = 0;
+            Debug.Log("checked");
+            player.locQuestButtons.SetActive(true);
+            //check();
+            //response = 0;
         }
     }
 

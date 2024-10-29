@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5ec9bec1357d4544195d44a66469168d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2418d25df39c5b439428c79da48e259, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   description: Chains shattered and rusted, their bonds broken by some unseen force.
     They symbolize freedom regained and oppression overcome, but also the lingering
     threat of chaos unleashed.
-  interactText: {fileID: 0}
 --- !u!58 &-8857921715543469104
 CircleCollider2D:
   m_ObjectHideFlags: 0

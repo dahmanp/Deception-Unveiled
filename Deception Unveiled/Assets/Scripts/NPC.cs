@@ -189,6 +189,7 @@ public class NPC : MonoBehaviour
             return;
         }
         player.invScreen.SetActive(true);
+        player.exitButton.SetActive(true);
     }
 
     public void check()

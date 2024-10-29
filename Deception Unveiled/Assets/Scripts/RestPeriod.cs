@@ -124,6 +124,7 @@ public class RestPeriod : MonoBehaviour
     void SS_autoFail()
     {
         //Debug.Log("AUTOFAIL");
+        //if the bool completed is false, delete that npc
         player.questsFailed++;
         player.totalQuests++;
     }

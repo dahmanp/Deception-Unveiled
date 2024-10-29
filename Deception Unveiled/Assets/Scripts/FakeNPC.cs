@@ -8,6 +8,14 @@ public class FakeNPC : MonoBehaviour
 {
     private PlayerController player;
     private bool inRange = false;
+    public Sprite[] sprites;
+    public int option;
+
+    void Awake()
+    {
+        option = Random.Range(0, 4);
+        this.GetComponent<SpriteRenderer>().sprite = sprites[option];
+    }
 
     void Update()
     {

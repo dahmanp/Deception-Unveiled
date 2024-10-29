@@ -5,13 +5,12 @@
     //- puzzle of some sort to get the right info
 //- item interaction
     //- puzzle of some sort to get the right info
-//- generation / randomization:
-    //- spawn 10 random npcs
-    //- randomiza the item locations
 //- start sequence
     //- an introduction to the story
 //- end sequence
     //- the ending to the story
+//- midway sequence
+    //- open up the second half of the map
 
 //Art
 //- MC design
@@ -22,8 +21,12 @@
     //- overworld sprites and dialogue
 //- Redraw map, make it a little bigger
 //- draw out items
-//- rain, clouds, etc
 
 //Misc
 //- inventory, option to throw away evidence (items) to free up inventory slots
-//- place to hold location descriptions, and interview answers (notebook mayhaps?)
+
+//FOR TUTORIAL:
+    //- intro cutscene
+    //- Add new player script
+    //- have player talk to the npc, who gives some dialogue for the mission
+    //- have them look at the journal

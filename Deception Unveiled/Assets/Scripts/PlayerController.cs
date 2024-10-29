@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public int[] inventory;
     public string[] locInventory;
 
+    [Header("Current NPCS")]
     public NPC npc;
     public NPC_Locations locnpc;
     public NPC_Interview intnpc;

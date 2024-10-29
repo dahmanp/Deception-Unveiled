@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,13 +42,12 @@ public class GameManager : MonoBehaviour
     public GameObject barrier;
     private int selection; //number corresponds to an assortment
 
-    //set sprite in this one mayhaps - there will be 10 total, with 1 neutral, 1 angry, and 1 happy
-    //maybe keep a log, and just go through the array (first quest you look at starts the array at 0)
-
     [Header("Screens")]
-    public GameObject intro;
+    public GameObject endWin;
+    public GameObject endLose;
+    public GameObject failedMenu;
 
-    private bool inCutscene;
+
     //consider: after rest period, you enter a dream sequence? maybe you walk around the town at night and the shapeshifter chases you? a later thing
 
     void Awake()
@@ -55,18 +55,9 @@ public class GameManager : MonoBehaviour
         image_mc.sprite = neutral_mc;
         instance = this;
         selection = Random.Range(0, 4);
-        //inCutscene = true;
         player = playerObj.GetComponent<PlayerController>();
-        startCutscene();
         spawnNPCS(selection);
         spawnItems(selection);
-    }
-
-    void startCutscene()
-    {
-        //Start: we are assigned to solve the mysterious disappearences of the town
-        //We talk to the mayor: They tell us about shapeshifters in the town
-        //We set out to help the townspeople: end cutscene and spit player out into the map
     }
 
     //LOCATION QUESTS: quests 1-2 are SURFACE, quests 3-5 are DEEP END
@@ -193,6 +184,28 @@ public class GameManager : MonoBehaviour
         if (player.totalQuests >=5)
         {
             barrier.SetActive(false);
+        }
+        if (player.totalQuests >=10)
+        {
+            if (player.questsCompleted >= player.questsFailed)
+            {
+                endWin.SetActive(true);
+                endWin.GetComponent<IntroCutscene>().enabled = true;
+                if (endWin.GetComponent<IntroCutscene>().completed == true)
+                {
+                    SceneManager.LoadScene("Epilogue");
+                }
+            }
+            else if (player.questsCompleted < player.questsFailed)
+            {
+                endLose.SetActive(true);
+                endLose.GetComponent<IntroCutscene>().enabled = true;
+                if (endLose.GetComponent<IntroCutscene>().completed == true)
+                {
+                    endLose.SetActive(false);
+                    failedMenu.SetActive(true);
+                }
+            }
         }
     }
 }

@@ -36,11 +36,13 @@ public class Menu : MonoBehaviour
         screens[1].SetActive(false);
         screens[2].SetActive(false);
         screens[3].SetActive(false);
+        Time.timeScale = 0f;
     }
 
     public void closeJournal()
     {
         journalScreen.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void mainMenu()
@@ -130,6 +132,7 @@ public class Menu : MonoBehaviour
         player.inspectText.SetActive(false);
         player.exitButton.SetActive(false);
         player.locQuestButtons.SetActive(false);
+        player.invScreen.SetActive(false);
 
         if (player.questEndWin == true)
         {
