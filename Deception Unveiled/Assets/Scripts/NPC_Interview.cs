@@ -13,6 +13,8 @@ public class NPC_Interview : MonoBehaviour
 {
     private PlayerController player;
     private GameManager gm;
+    private RestPeriod rp;
+
     private Menu menu;
     private bool inRange = false;
     public InterviewQuest quest;
@@ -230,6 +232,7 @@ public class NPC_Interview : MonoBehaviour
             menu.numInt++;
             gm.image_mc.sprite = gm.happy_mc;
             gm.npc_image.sprite = gm.happy[image_id];
+
             player.quiz.SetActive(false);
             player.desc.text = win2;
             player.inspectText.SetActive(true);
@@ -239,6 +242,8 @@ public class NPC_Interview : MonoBehaviour
             q1 = false;
             player.questsCompleted++;
             player.totalQuests++;
+
+            //rp.WinRest();
             player.questEndWin = true;
             player.playerInQuest = false;
 
@@ -248,6 +253,7 @@ public class NPC_Interview : MonoBehaviour
         {
             gm.image_mc.sprite = gm.sad_mc;
             gm.npc_image.sprite = gm.angry[image_id];
+
             player.quiz.SetActive(false);
             player.desc.text = fail;
             player.inspectText.SetActive(true);
@@ -255,6 +261,8 @@ public class NPC_Interview : MonoBehaviour
             player.hintScreen.SetActive(false);
             player.questsFailed++;
             player.totalQuests++;
+
+            //rp.FailRest();
             player.questEndFail = true;
             player.playerInQuest = false;
 

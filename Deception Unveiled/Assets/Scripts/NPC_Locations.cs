@@ -12,6 +12,7 @@ public enum LocQuest
 public class NPC_Locations : MonoBehaviour
 {
     private PlayerController player;
+    private RestPeriod rp;
     private GameManager gm;
     private bool inRange = false;
     public LocQuest quest;
@@ -43,6 +44,7 @@ public class NPC_Locations : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         gm = FindObjectOfType<GameManager>();
+        rp = FindObjectOfType<RestPeriod>();
     }
 
     void Start()
@@ -65,7 +67,6 @@ public class NPC_Locations : MonoBehaviour
         }
         if (inQuest==true && response!=0)
         {
-            Debug.Log("checked");
             player.locQuestButtons.SetActive(true);
             //check();
             //response = 0;
@@ -151,6 +152,7 @@ public class NPC_Locations : MonoBehaviour
     {
         if (response == answer)
         {
+            Debug.Log("correct");
             gm.image_mc.sprite = gm.happy_mc;
             gm.npc_image.sprite = gm.happy[image_id];
 
@@ -161,6 +163,8 @@ public class NPC_Locations : MonoBehaviour
             inQuest = false;
             player.questsCompleted++;
             player.totalQuests++;
+
+            //rp.WinRest();
             player.questEndWin = true;
             player.playerInQuest = false;
 
@@ -177,6 +181,8 @@ public class NPC_Locations : MonoBehaviour
             inQuest = false;
             player.questsFailed++;
             player.totalQuests++;
+
+            //rp.FailRest();
             player.questEndFail = true;
             player.playerInQuest = false;
 

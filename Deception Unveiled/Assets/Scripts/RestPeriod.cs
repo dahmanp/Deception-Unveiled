@@ -44,12 +44,13 @@ public class RestPeriod : MonoBehaviour
         screen.SetActive(true);
     }
 
-    void Update()
+    /*void Update()
     {
         //for some reason it isnt logging whether you win or lose, it just goes to the win screen
         // sometimes it works???? idk lol
         if (player.winRest == true)
         {
+            Debug.Log("winrest");
             canvas.SetActive(true);
             SetScreen(restPeriodIntro);
             chooseEvent();
@@ -57,11 +58,30 @@ public class RestPeriod : MonoBehaviour
         }
         else if (player.failRest == true)
         {
+            Debug.Log("failrest");
             canvas.SetActive(true);
             SetScreen(failTransitionPage);
             chooseEvent();
             player.failRest = false;
         }
+    }*/
+
+    public void FailRest()
+    {
+        Debug.Log("failrest");
+        canvas.SetActive(true);
+        SetScreen(failTransitionPage);
+        chooseEvent();
+        player.failRest = false;
+    }
+
+    public void WinRest()
+    {
+        Debug.Log("winrest");
+        canvas.SetActive(true);
+        SetScreen(restPeriodIntro);
+        chooseEvent();
+        player.winRest = false;
     }
 
     public void SelectOption()

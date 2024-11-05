@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private PlayerController player;
     private GameManager gm;
+    private RestPeriod rp;
 
     public int image_id;
     public SpriteRenderer groundImage;
@@ -45,6 +46,7 @@ public class NPC : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         gm = FindObjectOfType<GameManager>();
+        rp = FindObjectOfType<RestPeriod>();
     }
 
     void Start()
@@ -163,7 +165,6 @@ public class NPC : MonoBehaviour
         player.npc = this;
         if (player == null)
         {
-            Debug.Log("start Error");
             return;
         }
 
@@ -185,7 +186,6 @@ public class NPC : MonoBehaviour
     {
         if (player == null)
         {
-            Debug.Log("selectOption Error");
             return;
         }
         player.invScreen.SetActive(true);
@@ -196,12 +196,10 @@ public class NPC : MonoBehaviour
     {
         if (player == null)
         {
-            Debug.Log("check (player) Error");
             return;
         }
         if (!inQuest)
         {
-            Debug.Log("check (inquest) Error");
             return;
         }
 
@@ -220,6 +218,8 @@ public class NPC : MonoBehaviour
 
             player.questsCompleted++;
             player.totalQuests++;
+
+            //rp.WinRest();
             player.questEndWin = true;
             player.curSpace--;
             if (player.curSpace < 0) {
@@ -242,6 +242,8 @@ public class NPC : MonoBehaviour
             inQuest = false;
             player.questsFailed++;
             player.totalQuests++;
+
+            //rp.FailRest();
             player.questEndFail = true;
             player.playerInQuest = false;
 

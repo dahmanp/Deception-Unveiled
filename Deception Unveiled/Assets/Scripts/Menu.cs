@@ -8,6 +8,7 @@ using TMPro;
 public class Menu : MonoBehaviour
 {
     private PlayerController player;
+    private RestPeriod rp;
     public NPC npc;
     public NPC_Locations locnpc;
     public NPC_Interview intnpc;
@@ -26,6 +27,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        rp = FindObjectOfType<RestPeriod>();
     }
 
     public void openJournal()
@@ -136,11 +138,13 @@ public class Menu : MonoBehaviour
 
         if (player.questEndWin == true)
         {
-            player.winRest = true;
+            rp.WinRest();
+            player.questEndWin = false;
         }
         else if (player.questEndFail == true)
         {
-            player.failRest = true;
+            rp.FailRest();
+            player.questEndFail = false;
         }
     }
 
@@ -166,7 +170,9 @@ public class Menu : MonoBehaviour
         player.charaImages.SetActive(false);
         player.inspectText.SetActive(false);
         player.buttons.SetActive(false);
-        player.questEndFail = true;
+
+        rp.FailRest();
+        //player.questEndFail = true;
         player.playerInQuest = false;
         player.questsFailed++;
         player.totalQuests++;
