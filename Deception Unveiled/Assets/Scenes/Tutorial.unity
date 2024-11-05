@@ -5626,7 +5626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180406760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -152.9, y: 4.4, z: 0}
+  m_LocalPosition: {x: -167.7, y: 4.4, z: 0}
   m_LocalScale: {x: 3.76, y: 3.76, z: 3.76}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8053,7 +8053,7 @@ Transform:
   m_GameObject: {fileID: 1548939109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -96.69998, y: 2.3, z: 0}
-  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
+  m_LocalScale: {x: 8.32, y: 8.32, z: 8.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -9964,7 +9964,7 @@ Transform:
   m_GameObject: {fileID: 1973039711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -96.69998, y: 2.3, z: 0}
-  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
+  m_LocalScale: {x: 8.32, y: 8.32, z: 8.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -10625,8 +10625,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059735550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.59999, y: 2.3014, z: 0}
-  m_LocalScale: {x: 5.048365, y: 28.637596, z: 6.79}
+  m_LocalPosition: {x: -19.9321, y: 3.1719, z: 0}
+  m_LocalScale: {x: 6.7890515, y: 40.822933, z: 6.79}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -10944,7 +10944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1905113120510087602, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 6.1
       objectReference: {fileID: 0}
     - target: {fileID: 1905113120510087602, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10986,52 +10986,5 @@ PrefabInstance:
       propertyPath: mayorImage
       value: 
       objectReference: {fileID: 1507751522}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: sprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: dialogue.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: sprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: f4014d09f250c41488121feafdfc8eb3, type: 3}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: sprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 4d38d814e70fba2448a2addefa63cc89, type: 3}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: sprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: f4014d09f250c41488121feafdfc8eb3, type: 3}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: sprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 775d66a3479bc68479887d8f66a57d9c, type: 3}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: dialogue.Array.data[0]
-      value: "Ah, you must be Detective Hunter-Green. We\u2019re grateful for your
-        swift arrival\u2026 we\u2019re in quite a predicament and hope you can unravel
-        this mystery for us. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: dialogue.Array.data[1]
-      value: "There have been\u2026 monsters\u2026 terrorizing our town. Their true
-        nature is unclear, but they seem to impersonate our loved ones\u2014horrifying
-        creatures. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: dialogue.Array.data[2]
-      value: "I fear that one of our townsfolk may have been killed and replaced
-        by one of these monsters. Please, help us eliminate this threat so we can
-        feel safe again\u2026 "
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353039498308900443, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
-      propertyPath: dialogue.Array.data[3]
-      value: Our town is just down the path. Be careful. Oh, you may find some interesting
-        things on the way.
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd3dc6c4a463324ca7e5119340c916c, type: 3}
