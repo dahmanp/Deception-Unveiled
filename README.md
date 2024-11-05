@@ -8,7 +8,7 @@ Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
 
 What's New:
 - folklore art asset
-- map npc art asset
+- map npc art assets
 - barrier art asset
 - main map art asset
 - tutorial map art asset
