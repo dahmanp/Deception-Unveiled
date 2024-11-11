@@ -68,8 +68,6 @@ public class NPC_Locations : MonoBehaviour
         if (inQuest==true && response!=0)
         {
             player.locQuestButtons.SetActive(true);
-            //check();
-            //response = 0;
         }
     }
 
@@ -168,7 +166,7 @@ public class NPC_Locations : MonoBehaviour
             player.questEndWin = true;
             player.playerInQuest = false;
 
-            this.enabled = false;
+            Destroy(this.gameObject);
         } else
         {
             gm.image_mc.sprite = gm.sad_mc;
@@ -186,7 +184,7 @@ public class NPC_Locations : MonoBehaviour
             player.questEndFail = true;
             player.playerInQuest = false;
 
-            this.enabled = false;
+            Destroy(this.gameObject);
         }
     }
 }

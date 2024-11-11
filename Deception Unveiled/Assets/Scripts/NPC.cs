@@ -228,7 +228,7 @@ public class NPC : MonoBehaviour
             player.sortArray(player.inventory);
             player.playerInQuest = false;
 
-            this.enabled = false;
+            Destroy(this.gameObject);
         } else
         {
             gm.image_mc.sprite = gm.sad_mc;
@@ -247,7 +247,7 @@ public class NPC : MonoBehaviour
             player.questEndFail = true;
             player.playerInQuest = false;
 
-            this.enabled = false;
+            Destroy(this.gameObject);
         }
     }
 }

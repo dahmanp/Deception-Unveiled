@@ -71,12 +71,12 @@ public class Menu : MonoBehaviour
 
     public void rightButton()
     {
-        if (currScreen >= 3)
+        if (currScreen >= 4)
         {
             Debug.Log("Already at rightmost screen!");
-            if (currScreen > 3)
+            if (currScreen > 4)
             {
-                currScreen = 3;
+                currScreen = 4;
             }
         }
         else

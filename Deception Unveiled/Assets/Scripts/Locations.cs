@@ -12,9 +12,11 @@ public class Locations : MonoBehaviour
     public LocationType type;
     private PlayerController player;
     private Menu menu;
+    private JournalMap map;
     private bool inRange = false;
     public string badDesc;
     public string goodDesc;
+    public int index;
 
     public bool collected = false;
 
@@ -22,6 +24,7 @@ public class Locations : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
         menu = FindObjectOfType<Menu>();
+        map = FindObjectOfType<JournalMap>();
     }
 
     void Update()
@@ -30,10 +33,13 @@ public class Locations : MonoBehaviour
         {
             if (player.locnpc == null || player.locnpc.inQuest == false)
             {
+
                 DescribeLocationGood();
                 player.addLocation(goodDesc);
                 menu.locList[menu.numLoc].text = goodDesc;
-            } else if (player.locnpc.inQuest == true)
+                map.unlockSection(index);
+            }
+            else if (player.locnpc.inQuest == true)
             {
                 typeSwitch();
             }
@@ -119,11 +125,13 @@ public class Locations : MonoBehaviour
     void DescribeLocationGood()
     {
         Debug.Log(goodDesc);
+        //map.unlockSection(index);
     }
 
     void DescribeLocationBad()
     {
         Debug.Log(badDesc);
+        //map.unlockSection(index);
     }
 
     public void check(int i)
@@ -132,7 +140,6 @@ public class Locations : MonoBehaviour
         //DescribeLocationBad();
         if (collected==false)
         {
-            Debug.Log(menu);
             player.addLocation(goodDesc);
             menu.locList[menu.numLoc].text = goodDesc;
             menu.numLoc++;

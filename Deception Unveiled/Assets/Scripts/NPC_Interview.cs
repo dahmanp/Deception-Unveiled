@@ -247,7 +247,7 @@ public class NPC_Interview : MonoBehaviour
             player.questEndWin = true;
             player.playerInQuest = false;
 
-            this.enabled = false;
+            Destroy(this.gameObject);
         }
         else
         {
@@ -266,7 +266,7 @@ public class NPC_Interview : MonoBehaviour
             player.questEndFail = true;
             player.playerInQuest = false;
 
-            this.enabled = false;
+            Destroy(this.gameObject);
         }
     }
 }
