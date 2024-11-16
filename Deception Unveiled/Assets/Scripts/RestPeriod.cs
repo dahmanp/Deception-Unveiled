@@ -68,7 +68,7 @@ public class RestPeriod : MonoBehaviour
 
     public void FailRest()
     {
-        Debug.Log("failrest");
+        //Debug.Log("failrest");
         canvas.SetActive(true);
         SetScreen(failTransitionPage);
         chooseEvent();
@@ -77,7 +77,7 @@ public class RestPeriod : MonoBehaviour
 
     public void WinRest()
     {
-        Debug.Log("winrest");
+        //Debug.Log("winrest");
         canvas.SetActive(true);
         SetScreen(restPeriodIntro);
         chooseEvent();

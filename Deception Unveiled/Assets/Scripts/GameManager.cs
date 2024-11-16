@@ -40,15 +40,12 @@ public class GameManager : MonoBehaviour
 
     [Header("Misc")]
     public GameObject barrier;
-    private int selection; //number corresponds to an assortment
+    private int selection;
 
     [Header("Screens")]
     public GameObject endWin;
     public GameObject endLose;
     public GameObject failedMenu;
-
-
-    //consider: after rest period, you enter a dream sequence? maybe you walk around the town at night and the shapeshifter chases you? a later thing
 
     void Awake()
     {

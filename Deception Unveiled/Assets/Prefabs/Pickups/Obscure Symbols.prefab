@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  description: Ancient symbols etched into weathered stone, their meanings lost to
-    time. Their cryptic patterns whisper of forgotten rituals and hidden knowledge,
-    waiting to be deciphered.
+  goodDesc: Ancient symbols etched into weathered stone, their meanings lost to time.
+    Their cryptic patterns whisper of forgotten rituals and hidden knowledge, waiting
+    to be deciphered.
+  badDesc: Marks on stone, old and worn. Their meaning, if there ever was one, is
+    lost.
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: c99a7cf30a4693e4b9685f4cce2b6954, type: 3}
 --- !u!58 &1250591048973341752
 CircleCollider2D:
   m_ObjectHideFlags: 0

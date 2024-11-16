@@ -99,10 +99,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 9
-  description: A colossal gemstone, sparkling with a mesmerizing brilliance that
-    captivates all who gaze upon it. Its beauty is matched only by its rarity, and
-    its value is beyond measure. Yet, its size and significance hint at a deeper
-    mystery waiting to be uncovered.
+  goodDesc: A colossal gemstone, sparkling with a mesmerizing brilliance that captivates
+    all who gaze upon it. Its beauty is matched only by its rarity, and its value
+    is beyond measure. Yet, its size and significance hint at a deeper mystery waiting
+    to be uncovered.
+  badDesc: A stone, large and striking. What it means, or if it means anything, is
+    hard to say.
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: 8357de395005ea84a8b0ee0dd2297f13, type: 3}
 --- !u!58 &-515455047436289335
 CircleCollider2D:
   m_ObjectHideFlags: 0

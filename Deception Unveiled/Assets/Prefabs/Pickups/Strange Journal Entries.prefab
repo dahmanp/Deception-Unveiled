@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  description: "Mysterious ramblings from a doctor gone mad. These journal entries
-    contain theories and studies of the shapeshifters that wander free in the town.
-    Perhaps they weren\u2019t always free\u2026"
+  goodDesc: "Mysterious ramblings from a doctor gone mad. These journal entries contain
+    theories and studies of the shapeshifters that wander free in the town. Perhaps
+    they weren\u2019t always free\u2026"
+  badDesc: "Scattered thoughts, filled with confusion and hints of something strange.
+    There are mentions of things, but it\u2019s unclear what they truly are."
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: ac3cdcf216341084db086e51d42479a4, type: 3}
 --- !u!58 &-4514274694471212966
 CircleCollider2D:
   m_ObjectHideFlags: 0

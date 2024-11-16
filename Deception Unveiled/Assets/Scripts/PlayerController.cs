@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+
     [Header("Info")]
     public float moveSpeed;
 
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public bool playerInQuest = false;
 
     //I WANT THE FOLLOWING PUT INTO GAMEMANAGER BUT IT NO NO WANNA WORK RIGHT NOW
+    public GameObject puzzleTime;
     public GameObject interactText;
     public TMP_Text text_interactText;
     public GameObject inspectText;

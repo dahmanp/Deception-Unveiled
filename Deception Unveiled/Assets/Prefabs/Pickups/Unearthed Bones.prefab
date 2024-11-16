@@ -99,10 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  description: Skeletal remains unearthed from the depths of the earth, their silent
+  goodDesc: Skeletal remains unearthed from the depths of the earth, their silent
     testimony bearing witness to forgotten tragedies. They speak of lives lost and
     mysteries buried, waiting to be uncovered by those brave enough to delve into
     the past.
+  badDesc: Bones, dug up from somewhere. They belong to something, but what, exactly?
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: bd1df242bcd36f646aff014592c16646, type: 3}
 --- !u!58 &-1786349707122569739
 CircleCollider2D:
   m_ObjectHideFlags: 0

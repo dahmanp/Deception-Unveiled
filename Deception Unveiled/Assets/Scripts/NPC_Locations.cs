@@ -150,7 +150,6 @@ public class NPC_Locations : MonoBehaviour
     {
         if (response == answer)
         {
-            Debug.Log("correct");
             gm.image_mc.sprite = gm.happy_mc;
             gm.npc_image.sprite = gm.happy[image_id];
 

@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LocationType
-{
-    church, graveyard, mine, forest, grove, woods, library, square, laboratory, ruins
-}
-
 public class Locations : MonoBehaviour
 {
-    public LocationType type;
     private PlayerController player;
+    private PicCheck puzzleCheck;
     private Menu menu;
     private JournalMap map;
     private bool inRange = false;
     public string badDesc;
     public string goodDesc;
     public int index;
+
+    public GameObject puzzleScreen;
+    public GameObject puzzle;
 
     public bool collected = false;
 
@@ -31,20 +29,52 @@ public class Locations : MonoBehaviour
     {
         if (inRange == true && Input.GetKeyDown(KeyCode.F))
         {
-            if (player.locnpc == null || player.locnpc.inQuest == false)
-            {
+            PuzzleTime();
+            player.interactText.SetActive(false);
+            //set active the commentary text so that players can read the location descriptions.
+        }
+    }
 
-                DescribeLocationGood();
+    private void PuzzleTime()
+    {
+        puzzleScreen.SetActive(true);
+        GameObject instantiatedPuzzle = Instantiate(puzzle, puzzleScreen.transform);
+        puzzleCheck = instantiatedPuzzle.GetComponent<PicCheck>();
+
+        StartCoroutine(CheckResult(instantiatedPuzzle));
+    }
+
+    IEnumerator CheckResult(GameObject puzzle)
+    {
+        while (!puzzleCheck.puzzleEnd)
+        {
+            yield return null;
+        }
+        Debug.Log(collected);
+        if (collected == false)
+        {
+            if (puzzleCheck.puzzleComplete == true)
+            {
                 player.addLocation(goodDesc);
                 menu.locList[menu.numLoc].text = goodDesc;
-                map.unlockSection(index);
             }
-            else if (player.locnpc.inQuest == true)
+            else
             {
-                typeSwitch();
+                player.addLocation(badDesc);
+                menu.locList[menu.numLoc].text = badDesc;
             }
-            player.interactText.SetActive(false);
+            menu.numLoc++;
+            collected = true;
         }
+
+        if (player.locnpc != null && player.locnpc.inQuest == true)
+        {
+            player.locnpc.response = index+1;
+        }
+
+        puzzleScreen.SetActive(false);
+        map.unlockSection(index);
+        Destroy(puzzle);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -66,83 +96,5 @@ public class Locations : MonoBehaviour
         }
         player.interactText.SetActive(false);
         player.inspectText.SetActive(false);
-    }
-
-    void typeSwitch()
-    {
-        if (type == LocationType.church)
-        {
-            check(1);
-            collected = true;
-        }
-        else if (type == LocationType.graveyard)
-        {
-            check(2);
-            collected = true;
-        }
-        else if (type == LocationType.mine)
-        {
-            check(3);
-            collected = true;
-        }
-        else if (type == LocationType.forest)
-        {
-            check(4);
-            collected = true;
-        }
-        else if (type == LocationType.grove)
-        {
-            check(5);
-            collected = true;
-        }
-        else if (type == LocationType.woods)
-        {
-            check(6);
-            collected = true;
-        }
-        else if (type == LocationType.library)
-        {
-            check(7);
-            collected = true;
-        }
-        else if (type == LocationType.square)
-        {
-            check(8);
-            collected = true;
-        }
-        else if (type == LocationType.laboratory)
-        {
-            check(9);
-            collected = true;
-        }
-        else if (type == LocationType.ruins)
-        {
-            check(10);
-            collected = true;
-        }
-    }
-
-    void DescribeLocationGood()
-    {
-        Debug.Log(goodDesc);
-        //map.unlockSection(index);
-    }
-
-    void DescribeLocationBad()
-    {
-        Debug.Log(badDesc);
-        //map.unlockSection(index);
-    }
-
-    public void check(int i)
-    {
-        player.locnpc.response = i;
-        //DescribeLocationBad();
-        if (collected==false)
-        {
-            player.addLocation(goodDesc);
-            menu.locList[menu.numLoc].text = goodDesc;
-            menu.numLoc++;
-        }
     }
 }

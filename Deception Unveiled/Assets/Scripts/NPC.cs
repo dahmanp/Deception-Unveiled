@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-//set an id upon instantiating, then assign ground images there
 public enum ItemQuest
 {
     quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8, quest9, quest10

@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  description: Tales passed down through generations, blending truth with myth and
-    reality with imagination. These stories hold the wisdom of the ages, offering
-    clues to the mysteries that haunt the town.
+  goodDesc: Tales passed down through generations, blending truth with myth and reality
+    with imagination. These stories hold the wisdom of the ages, offering clues to
+    the mysteries that haunt the town.
+  badDesc: "Tales that seem to have a point, but it\u2019s unclear what that point
+    is. Something\u2019s hidden within, maybe."
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: 63cdbaa231aaf894890f993ef6b79e08, type: 3}
 --- !u!58 &2747924578529759589
 CircleCollider2D:
   m_ObjectHideFlags: 0

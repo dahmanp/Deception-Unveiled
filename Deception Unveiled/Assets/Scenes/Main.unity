@@ -1377,7 +1377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
   badDesc: A dense, dark area with limited light. It feels mysterious with occasional
     indistinct noises.
   goodDesc: A dense and foreboding forest where sunlight struggles to penetrate the
@@ -1385,6 +1384,8 @@ MonoBehaviour:
     whispers seem to echo through the undergrowth. The forest exudes an air of mystery
     and danger.
   index: 3
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: 47edd80a7393f6f4f966eec24396c497, type: 3}
   collected: 0
 --- !u!1 &71242821
 GameObject:
@@ -1846,7 +1847,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 11da2b5db6dd09a469c8d09445ba4ab4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3710,7 +3711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   badDesc: "A vast, neglected area with some old equipment. It\u2019s cool and musty
     with occasional sounds."
   goodDesc: A sprawling network of dark tunnels and caverns, abandoned long ago by
@@ -3718,6 +3718,8 @@ MonoBehaviour:
     echoing drips of water. The air is cool and musty, with the distant rumble of
     underground streams.
   index: 2
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: 2390649c2244d4a49a599e053ddef23a, type: 3}
   collected: 0
 --- !u!1 &374507834
 GameObject:
@@ -4503,7 +4505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
   badDesc: "A quiet spot with filtered light. It\u2019s calm with gentle sounds and
     a faint scent."
   goodDesc: A tranquil and serene grove where shafts of golden sunlight filter through
@@ -4511,6 +4512,8 @@ MonoBehaviour:
     gentle rustle of leaves and the sweet fragrance of wildflowers. It's a peaceful
     oasis amidst the chaos of the surrounding wilderness.
   index: 4
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: 7c048a8af3dd6454aa05d73213758b44, type: 3}
   collected: 0
 --- !u!1 &457384283
 GameObject:
@@ -6261,6 +6264,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597308214}
   m_CullTransparentMesh: 1
+--- !u!1 &598756632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598756633}
+  - component: {fileID: 598756635}
+  - component: {fileID: 598756634}
+  m_Layer: 5
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &598756633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598756632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1242723208}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1}
+  m_SizeDelta: {x: 0.0001, y: 2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &598756634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598756632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &598756635
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598756632}
+  m_CullTransparentMesh: 1
 --- !u!1 &618527974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,37 +6720,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642762921}
   m_CullTransparentMesh: 1
---- !u!1 &651750350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 651750351}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &651750351
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651750350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.252, y: 66.049, z: 0.9929533}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657473963
 GameObject:
   m_ObjectHideFlags: 0
@@ -7391,7 +7439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &722263599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7885,7 +7933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 9
   badDesc: Old, partially hidden remnants of something past. There are broken structures
     and figures suggesting a forgotten past.
   goodDesc: Crumbling ruins of an ancient civilization, shrouded in moss and ivy,
@@ -7893,6 +7940,8 @@ MonoBehaviour:
     of a forgotten past, with weathered statues and crumbling archways hinting at
     lost secrets and untold mysteries.
   index: 9
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: 9cc1a54eb4deff647881c1257acff248, type: 3}
   collected: 0
 --- !u!1 &797458248
 GameObject:
@@ -8707,7 +8756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 8
   badDesc: A hidden place with various unusual items. The air has a strong scent
     of chemicals.
   goodDesc: A hidden laboratory concealed beneath the town, filled with bubbling
@@ -8715,6 +8763,8 @@ MonoBehaviour:
     the scent of chemicals, and the walls are lined with shelves of arcane artifacts
     and forbidden experiments.
   index: 8
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: b5d901b241b6a5146a206033664dda73, type: 3}
   collected: 0
 --- !u!1 &887885500
 GameObject:
@@ -9893,13 +9943,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 5
   badDesc: A breezy area with moving branches. The air feels fresh with distant sounds.
   goodDesc: A windswept forest where the branches sway and whistle in the breeze.
     The trees stand tall and slender, their leaves shimmering with a silvery sheen.
     The air is crisp and invigorating, with the distant melody of birdsong carried
     on the wind.
   index: 5
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: c10e65df2795f9d4387a07c396300ce9, type: 3}
   collected: 0
 --- !u!1 &1013852883
 GameObject:
@@ -11062,6 +11113,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113293981}
   m_CullTransparentMesh: 1
+--- !u!1 &1119405108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119405110}
+  - component: {fileID: 1119405109}
+  m_Layer: 0
+  m_Name: Map_Overhead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1119405109
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119405108}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 2ca5aa8942ae88d40951899698674337, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 26.745262, y: 15.879999}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1119405110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119405108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.32, y: 8.32, z: 8.32}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121026300
 GameObject:
   m_ObjectHideFlags: 0
@@ -11645,7 +11780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 6
   badDesc: A dim space filled with shelves and books. Light comes through colored
     glass, creating patterns.
   goodDesc: A dusty and dimly lit library filled with towering bookshelves and ancient
@@ -11653,6 +11787,8 @@ MonoBehaviour:
     on the worn wooden tables and threadbare carpets. The library is a treasure trove
     of knowledge and secrets waiting to be uncovered.
   index: 6
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: 11f1de8b715119b47877735f014c571b, type: 3}
   collected: 0
 --- !u!1 &1155189246
 GameObject:
@@ -12060,7 +12196,7 @@ RectTransform:
   - {fileID: 419483684}
   - {fileID: 890816769}
   m_Father: {fileID: 1337846225}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -12415,6 +12551,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231940599}
   m_CullTransparentMesh: 1
+--- !u!1 &1242723207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242723208}
+  m_Layer: 5
+  m_Name: Puzzles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1242723208
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242723207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 598756633}
+  m_Father: {fileID: 1337846225}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.42071533}
+  m_SizeDelta: {x: 0.0003, y: -0.8414}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1247348554
 GameObject:
   m_ObjectHideFlags: 0
@@ -13375,6 +13548,7 @@ RectTransform:
   - {fileID: 1536780138}
   - {fileID: 2116947862}
   - {fileID: 1544190822}
+  - {fileID: 1242723208}
   - {fileID: 1208287155}
   - {fileID: 1402193254}
   m_Father: {fileID: 0}
@@ -13689,7 +13863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
   badDesc: An obscure place with overgrown markers and an uneasy feel. The air is
     damp, and there are distant sounds.
   goodDesc: An eerie and overgrown graveyard shrouded in mist, with moss-covered
@@ -13697,6 +13870,8 @@ MonoBehaviour:
     scent of damp earth, and the only sounds are the cawing of distant crows and
     the rustling of leaves.
   index: 1
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: 64ea564c7cdc55641832198704336ebb, type: 3}
   collected: 0
 --- !u!1 &1380712689
 GameObject:
@@ -13929,7 +14104,7 @@ RectTransform:
   - {fileID: 1350795493}
   - {fileID: 1505220546}
   m_Father: {fileID: 1337846225}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14072,13 +14247,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 7
   badDesc: "A central, active area with stalls and people. It\u2019s lively with
     familiar scents and sounds."
   goodDesc: The bustling heart of the town, where market stalls line cobblestone
     streets and lively crowds gather to gossip and trade. The air is filled with
     the aroma of freshly baked bread and the sound of laughter and conversation.
   index: 7
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: df2bbd9bff7433f46a583910ce468a5a, type: 3}
   collected: 0
 --- !u!1 &1414556662
 GameObject:
@@ -15516,7 +15692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a75c9fda0055243a67c7b3050969d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
   rig: {fileID: 1577852439}
   sr: {fileID: 1577852437}
   maxSpace: 4
@@ -15538,6 +15714,7 @@ MonoBehaviour:
   locnpc: {fileID: 0}
   intnpc: {fileID: 0}
   playerInQuest: 0
+  puzzleTime: {fileID: 1242723207}
   interactText: {fileID: 788567523}
   text_interactText: {fileID: 1446165294}
   inspectText: {fileID: 2091073490}
@@ -16508,7 +16685,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -18247,7 +18424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f0217d221b9b41807327011398727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   badDesc: "An old building with some decorative features. Inside, there\u2019s a
     subdued atmosphere and a distinct scent."
   goodDesc: A centuries-old church with weathered stone walls and stained glass windows.
@@ -18255,6 +18431,8 @@ MonoBehaviour:
     is thick with the scent of incense. The church exudes an aura of solemnity and
     reverence.
   index: 0
+  puzzleScreen: {fileID: 1242723207}
+  puzzle: {fileID: 1167946824742564237, guid: f7e372390a30e1640aa34c00d0f1de09, type: 3}
   collected: 0
 --- !u!1 &1900032482
 GameObject:
@@ -21326,7 +21504,7 @@ Transform:
   - {fileID: 884719256}
   - {fileID: 796871884}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &2138405643
 EdgeCollider2D:

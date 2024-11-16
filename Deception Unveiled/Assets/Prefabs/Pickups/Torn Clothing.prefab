@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 8
-  description: Shredded remnants of fabric, torn and tattered by unseen claws or
-    desperate struggles. They bear witness to untold horrors and desperate fights
-    for survival, silent reminders of the dangers lurking in the shadows.
+  goodDesc: Shredded remnants of fabric, torn and tattered by unseen claws or desperate
+    struggles. They bear witness to untold horrors and desperate fights for survival,
+    silent reminders of the dangers lurking in the shadows.
+  badDesc: Clothing, torn and forgotten. What caused it is unknown, but something
+    did.
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: 9b2563908ba07264297031b15d4d96e5, type: 3}
 --- !u!58 &6060437078770337435
 CircleCollider2D:
   m_ObjectHideFlags: 0

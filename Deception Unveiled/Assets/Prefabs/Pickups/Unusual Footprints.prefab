@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  description: Footprints that seem human but are not quite the same. They leave
-    behind a trail of uncertainty, hinting at the presence of something otherworldly
-    amidst the familiar.
+  goodDesc: Footprints that seem human but are not quite the same. They leave behind
+    a trail of uncertainty, hinting at the presence of something otherworldly amidst
+    the familiar.
+  badDesc: "Marks that resemble something familiar, yet something is\u2026 off. What
+    they belong to is uncertain."
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: efa7f8a65a4a19f4e849bf02566249aa, type: 3}
 --- !u!58 &9219094132483018297
 CircleCollider2D:
   m_ObjectHideFlags: 0

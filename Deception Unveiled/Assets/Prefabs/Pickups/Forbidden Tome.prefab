@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
-  description: No one believes in magic anymore, but artifacts like this remain from
+  goodDesc: No one believes in magic anymore, but artifacts like this remain from
     a time long past. The tome contains many spells and incantations. What could
     they have been used for?
+  badDesc: "A book, old and strange. Its purpose isn\u2019t clear, but it feels\u2026
+    important?"
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: 442aa1698c23e91488fc56872a034b5d, type: 3}
 --- !u!58 &8458368346734522272
 CircleCollider2D:
   m_ObjectHideFlags: 0

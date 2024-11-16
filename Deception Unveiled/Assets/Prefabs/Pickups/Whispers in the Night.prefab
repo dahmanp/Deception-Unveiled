@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  description: Soft murmurs that echo through the darkness, carrying secrets and
-    warnings on unseen winds. They speak of unseen dangers and unseen allies, guiding
-    those who listen through the shadows.
+  goodDesc: Soft murmurs that echo through the darkness, carrying secrets and warnings
+    on unseen winds. They speak of unseen dangers and unseen allies, guiding those
+    who listen through the shadows.
+  badDesc: "Murmurs that drift in and out, too faint to understand. They suggest
+    something, though it\u2019s hard to say what."
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: 66e730b40a1bb104e8e527859e101525, type: 3}
 --- !u!58 &-8969781200479344429
 CircleCollider2D:
   m_ObjectHideFlags: 0

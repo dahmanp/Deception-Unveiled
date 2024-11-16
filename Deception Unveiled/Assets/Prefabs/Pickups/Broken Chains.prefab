@@ -99,9 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 7
-  description: Chains shattered and rusted, their bonds broken by some unseen force.
+  goodDesc: Chains shattered and rusted, their bonds broken by some unseen force.
     They symbolize freedom regained and oppression overcome, but also the lingering
     threat of chaos unleashed.
+  badDesc: Something once bound, now undone. The why and how remain unclear.
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: 710b4c6a03ae36641bbbec42021b06c6, type: 3}
 --- !u!58 &-8857921715543469104
 CircleCollider2D:
   m_ObjectHideFlags: 0

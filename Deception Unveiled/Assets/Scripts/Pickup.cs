@@ -11,13 +11,21 @@ public class Pickup : MonoBehaviour
 {
     public PickupType type;
     private PlayerController player;
+    private PicCheck puzzleCheck;
     private Menu menu;
     private bool inRange = false;
-    public string description;
+    public string goodDesc;
+    public string badDesc;
+
+    public GameObject puzzleScreen;
+    public GameObject puzzle;
 
     void Start()
     {
         menu = FindObjectOfType<Menu>();
+        player = FindObjectOfType<PlayerController>();
+        puzzleScreen = player.puzzleTime;
+        Debug.Log(puzzleScreen);
     }
 
     void Update()
@@ -25,15 +33,40 @@ public class Pickup : MonoBehaviour
         if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
             typeSwitch();
+
         } else if (inRange == true && Input.GetKeyDown(KeyCode.Q))
         {
-            DescribeItem();
+            puzzleScreen.SetActive(true);
+            GameObject instantiatedPuzzle = Instantiate(puzzle, puzzleScreen.transform);
+            puzzleCheck = instantiatedPuzzle.GetComponent<PicCheck>();
+
+            StartCoroutine(CheckResult(instantiatedPuzzle));
         }
+    }
+
+    IEnumerator CheckResult(GameObject puzzle)
+    {
+        while (!puzzleCheck.puzzleEnd)
+        {
+            yield return null;
+        }
+
+        if (puzzleCheck.puzzleComplete == true)
+        {
+            menu.itemList[menu.numItems].text = goodDesc;
+        }
+        else
+        {
+            menu.itemList[menu.numItems].text = badDesc;
+        }
+
+        menu.numItems++;
+        puzzleScreen.SetActive(false);
+        Destroy(puzzle);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        player = collision.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
             inRange = true;
@@ -96,19 +129,12 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    void DescribeItem()
-    {
-        player.inspectText.SetActive(true);
-        player.desc.text = description;
-    }
-
     void check(int i)
     {
         if (player.curSpace < player.maxSpace)
         {
-            //Debug.Log("Added to inventory!");
             player.addItem(i);
-            menu.itemList[menu.numItems].text = description;
+            menu.itemList[menu.numItems].text = badDesc;
             menu.numItems++;
             Destroy(gameObject);
             player.inspectText.SetActive(false);

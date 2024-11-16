@@ -12,8 +12,8 @@ public class JournalMap : MonoBehaviour
     public RectTransform mapRectTransform;
     public Transform playerLoc;
 
-    public Vector2 worldMin = new Vector2(-1110, -660);
-    public Vector2 worldMax = new Vector2(1110, 660);
+    public Vector2 worldMin = new Vector2(-111, -66);
+    public Vector2 worldMax = new Vector2(111, 66);
 
     private void Update()
     {
@@ -36,6 +36,9 @@ public class JournalMap : MonoBehaviour
 
         mapPosition.x = Mathf.Clamp(mapPosition.x, -mapWidth / 2, mapWidth / 2);
         mapPosition.y = Mathf.Clamp(mapPosition.y, -mapHeight / 2, mapHeight / 2);
+
+        mapPosition.y += mapRectTransform.localPosition.y;
+        mapPosition.x += mapRectTransform.localPosition.x;
 
         return mapPosition;
     }

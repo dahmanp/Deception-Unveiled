@@ -7,15 +7,21 @@ Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
 - WASD - movement
 
 What's New:
-- building / forest colliders
-- mini map in menu (opens up as you explore the map)
-- npcs get destroyed after the quest is complete
-- gate will redirect you before you have 5 completed quests
+- puzzles for item investigation and location inspection
+	- As a player who finds it difficult to engage with side quests,
+	  I want there to be puzzles to solve, so that I can better immerse
+	  myself in the quests.
+- player marker for mini map
+	- 
+- epilogue sequence
+	- As a player who likes story conclusions, I would like to see an
+	  interesting ending sequence, so that I can feel satisfied when
+	  completing the story.
+- BLANK
 
 What's next:
 - ui npc assets
 - ui mc assets
 - epilogue sequence
 - mc sprite / walk cycle
-- puzzles for item investigation and location inspection
 - player marker on mini map
