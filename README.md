@@ -12,12 +12,12 @@ What's New:
 	  I want there to be puzzles to solve, so that I can better immerse
 	  myself in the quests.
 - player marker for mini map
-	- 
+	- As a player I want to be able to open a map to the available game
+          world so that I can gather information to help complete quests
 - epilogue sequence
 	- As a player who likes story conclusions, I would like to see an
 	  interesting ending sequence, so that I can feel satisfied when
 	  completing the story.
-- BLANK
 
 What's next:
 - ui npc assets
