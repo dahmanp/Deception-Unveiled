@@ -22,6 +22,7 @@ What's New:
 What's next:
 - ui npc assets
 - ui mc assets
-- epilogue sequence
+- cutscene art assets
+- fake npc art assets
+- puzzle art assets
 - mc sprite / walk cycle
-- player marker on mini map
