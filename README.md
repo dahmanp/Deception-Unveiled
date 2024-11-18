@@ -13,16 +13,18 @@ What's New:
 	  myself in the quests.
 - player marker for mini map
 	- As a player I want to be able to open a map to the available game
-          world so that I can gather information to help complete quests
+          world so that I can gather information to help complete quests.
 - epilogue sequence
 	- As a player who likes story conclusions, I would like to see an
 	  interesting ending sequence, so that I can feel satisfied when
 	  completing the story.
+- Fake NPC art assets
+	- As a player who likes art assets, I want the Fake NPCs to have
+	  actual art assets.
 
 What's next:
 - ui npc assets
 - ui mc assets
 - cutscene art assets
-- fake npc art assets
 - puzzle art assets
 - mc sprite / walk cycle
