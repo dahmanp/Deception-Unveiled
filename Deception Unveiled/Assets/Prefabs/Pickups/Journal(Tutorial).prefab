@@ -114,5 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1737e20cefcdd4382d9127594f6218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A nearly empty journal... there's a map here, but the rest is blank.
+  description: 
+  goodDesc: A nearly empty journal... there's a map here, but the rest is blank.
     Perhaps I can use this for my investigation.
+  badDesc: A book of some sort... what could it be?
+  puzzleScreen: {fileID: 0}
+  puzzle: {fileID: 1167946824742564237, guid: c4940b7fdd7c66a42a296f50f7907089, type: 3}

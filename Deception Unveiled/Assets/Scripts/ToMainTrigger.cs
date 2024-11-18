@@ -8,13 +8,11 @@ public class ToMainTrigger : MonoBehaviour
     public Collider2D exitcollider;
     public bool mayorCompleted = false;
     public bool itemCompleted = true;
-    public bool locCompleted = true;
 
+    public GameObject door;
     public GameObject journalScreen;
     public GameObject[] screens;
     public int currScreen;
-
-    //for location interaction, maybe the city gates?
 
     void Awake()
     {
@@ -23,9 +21,10 @@ public class ToMainTrigger : MonoBehaviour
 
     void Update()
     {
-        if (mayorCompleted && itemCompleted && locCompleted)
+        if (mayorCompleted && itemCompleted)
         {
             exitcollider.enabled = true;
+            door.SetActive(false);
         }
     }
 
@@ -66,12 +65,12 @@ public class ToMainTrigger : MonoBehaviour
 
     public void rightButton()
     {
-        if (currScreen >= 3)
+        if (currScreen >= 4)
         {
             Debug.Log("Already at rightmost screen!");
-            if (currScreen > 3)
+            if (currScreen > 4)
             {
-                currScreen = 3;
+                currScreen = 4;
             }
         }
         else

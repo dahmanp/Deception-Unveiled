@@ -15915,6 +15915,12 @@ MonoBehaviour:
   - {fileID: 164611186}
   - {fileID: 804435181}
   - {fileID: 629762992}
+  fakeNPCSprites:
+  - {fileID: 21300000, guid: 22d4aadc04606214fad6ec0d3106d7e1, type: 3}
+  - {fileID: 21300000, guid: be5729ed1431fbb438962f5e439334c4, type: 3}
+  - {fileID: 21300000, guid: ce2670e306185604197be876001957ec, type: 3}
+  - {fileID: 21300000, guid: edebe333b3ee96d47a70f6fb482b9695, type: 3}
+  - {fileID: 21300000, guid: c5bcabeeadc46ab43a0e70cc274d2e0f, type: 3}
 --- !u!1 &1588763075
 GameObject:
   m_ObjectHideFlags: 0

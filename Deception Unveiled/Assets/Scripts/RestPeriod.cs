@@ -28,6 +28,7 @@ public class RestPeriod : MonoBehaviour
     int SS_eventID;
     public GameObject[] tpSpots;
     public GameObject[] fakeNPCSpots;
+    public Sprite[] fakeNPCSprites;
 
     void Start()
     {
@@ -135,10 +136,23 @@ public class RestPeriod : MonoBehaviour
     void SS_fakeQuest()
     {
         //Debug.Log("FAKE");
-        locNPC = Random.Range(0, 4);
+        if (fakeNPCSpots.Length == 0)
+        {
+            SS_autoFail();
+        }
+
+        int locNPC = Random.Range(0, fakeNPCSpots.Length);
         Vector3 randomPosition = fakeNPCSpots[locNPC].transform.position;
         Quaternion spawnRotation = Quaternion.identity;
-        Instantiate(prefab, randomPosition, spawnRotation);
+
+        GameObject temp = Instantiate(prefab, randomPosition, spawnRotation);
+        temp.GetComponent<SpriteRenderer>().sprite = fakeNPCSprites[Random.Range(0, 4)];
+
+        GameObject tempSpot = fakeNPCSpots[locNPC];
+        fakeNPCSpots[locNPC] = fakeNPCSpots[fakeNPCSpots.Length - 1];
+        fakeNPCSpots[fakeNPCSpots.Length - 1] = tempSpot;
+
+        System.Array.Resize(ref fakeNPCSpots, fakeNPCSpots.Length - 1);
     }
 
     void SS_autoFail()

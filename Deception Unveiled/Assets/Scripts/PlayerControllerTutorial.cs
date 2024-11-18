@@ -23,6 +23,7 @@ public class PlayerControllerTutorial : MonoBehaviour
     public GameObject interactText;
     public GameObject journalButton;
     public TMP_Text text_interactText;
+    public GameObject puzzleTime;
 
     private MayorNPC mayor;
     private ToMainTrigger mainTrigger;

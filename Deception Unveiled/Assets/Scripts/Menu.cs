@@ -167,6 +167,26 @@ public class Menu : MonoBehaviour
 
     public void rejectQuest()
     {
+        npc = player.npc;
+        intnpc = player.intnpc;
+        locnpc = player.locnpc;
+
+        if (npc != null)
+        {
+            npc.inQuest = false;
+            Destroy(npc.gameObject);
+        }
+        else if (locnpc != null)
+        {
+            locnpc.inQuest = false;
+            Destroy(locnpc.gameObject);
+        }
+        else if (intnpc != null)
+        {
+            intnpc.inQuest = false;
+            Destroy(intnpc.gameObject);
+        }
+
         player.charaImages.SetActive(false);
         player.inspectText.SetActive(false);
         player.buttons.SetActive(false);
