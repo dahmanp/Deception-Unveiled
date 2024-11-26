@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
     public bool questEndFail = false;
     public bool questEndWin = false;
 
+    public AudioSource evilLaugh;
+
     public bool winRest = false;
     public bool failRest = false;
     

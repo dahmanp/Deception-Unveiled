@@ -24,6 +24,8 @@ public class Menu : MonoBehaviour
     public TMP_Text[] intList;
     public int numInt;
 
+    public AudioSource pageTurn;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -39,12 +41,14 @@ public class Menu : MonoBehaviour
         screens[2].SetActive(false);
         screens[3].SetActive(false);
         Time.timeScale = 0f;
+        pageTurn.Play();
     }
 
     public void closeJournal()
     {
         journalScreen.SetActive(false);
         Time.timeScale = 1f;
+        pageTurn.Play();
     }
 
     public void mainMenu()
@@ -67,6 +71,8 @@ public class Menu : MonoBehaviour
             currScreen--;
             screens[currScreen].SetActive(true);
         }
+
+        pageTurn.Play();
     }
 
     public void rightButton()
@@ -85,6 +91,8 @@ public class Menu : MonoBehaviour
             currScreen++;
             screens[currScreen].SetActive(true);
         }
+
+        pageTurn.Play();
     }
 
     public void selectObject(int i)
@@ -196,5 +204,6 @@ public class Menu : MonoBehaviour
         player.playerInQuest = false;
         player.questsFailed++;
         player.totalQuests++;
+        player.locQuestButtons.SetActive(false);
     }
 }

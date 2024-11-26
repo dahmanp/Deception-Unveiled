@@ -99,13 +99,16 @@ public class RestPeriod : MonoBehaviour
         failTransitionPage.SetActive(false);
         restPeriodIntro.SetActive(false);
         selectOption.SetActive(false);
+        player.buttons.SetActive(false);
+        player.buttonsInt.SetActive(false);
+        player.interactText.SetActive(false);
 
         day++;
         dateAndTime.text = "Day " + days[day-1] + ": Morning.";
 
-        totalStat.text = "Total Quests: " + player.totalQuests;
-        failStat.text = "Quests Failed: " + player.questsFailed;
-        winStat.text = "Quests Won: " + player.questsCompleted;
+        totalStat.text = "Total  Quests:  " + player.totalQuests;
+        failStat.text = "Quests  Failed:  " + player.questsFailed;
+        winStat.text = "Quests  Won:  " + player.questsCompleted;
     }
 
 
