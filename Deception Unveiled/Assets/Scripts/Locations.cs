@@ -57,11 +57,17 @@ public class Locations : MonoBehaviour
             {
                 player.addLocation(goodDesc);
                 menu.locList[menu.numLoc].text = goodDesc;
+                player.inspectText.SetActive(true);
+                player.exitButton.SetActive(true);
+                player.desc.text = goodDesc;
             }
             else
             {
                 player.addLocation(badDesc);
                 menu.locList[menu.numLoc].text = badDesc;
+                player.inspectText.SetActive(true);
+                player.exitButton.SetActive(true);
+                player.desc.text = badDesc;
             }
             menu.numLoc++;
             collected = true;

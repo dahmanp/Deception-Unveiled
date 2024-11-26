@@ -16,7 +16,6 @@ public class NPC_Locations : MonoBehaviour
     private GameManager gm;
     private bool inRange = false;
     public LocQuest quest;
-    public GameObject interact;
 
     public int image_id;
     public SpriteRenderer groundImage;
@@ -78,16 +77,17 @@ public class NPC_Locations : MonoBehaviour
         {
             inRange = true;
         }
-        interact.SetActive(true);
+        player.interactText.SetActive(true);
+        player.text_interactText.text = "E to Interact";
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        player.interactText.SetActive(false);
         if (collision.gameObject.GetComponent<PlayerController>() == player)
         {
             inRange = false;
         }
-        interact.SetActive(false);
     }
 
     void setDialogue(int i)
@@ -136,7 +136,7 @@ public class NPC_Locations : MonoBehaviour
         player.inspectText.SetActive(true);
         player.buttons.SetActive(true);
         inQuest = true;
-        interact.SetActive(false);
+        player.interactText.SetActive(false);
 
         if (player.investigationHints > 0)
         {

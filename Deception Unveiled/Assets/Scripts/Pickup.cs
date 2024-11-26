@@ -54,10 +54,16 @@ public class Pickup : MonoBehaviour
         if (puzzleCheck.puzzleComplete == true)
         {
             menu.itemList[menu.numItems].text = goodDesc;
+            player.inspectText.SetActive(true);
+            player.exitButton.SetActive(true);
+            player.desc.text = goodDesc;
         }
         else
         {
             menu.itemList[menu.numItems].text = badDesc;
+            player.inspectText.SetActive(true);
+            player.exitButton.SetActive(true);
+            player.desc.text = badDesc;
         }
 
         menu.numItems++;

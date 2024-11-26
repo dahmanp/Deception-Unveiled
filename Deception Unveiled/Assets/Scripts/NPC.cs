@@ -22,7 +22,6 @@ public class NPC : MonoBehaviour
     private bool inRange = false;
     public ItemQuest quest;
     private BoxCollider2D boxCollider;
-    public GameObject interact;
 
     public string[] intros;
     public string[] fails;
@@ -86,17 +85,18 @@ public class NPC : MonoBehaviour
             player = potentialPlayer;
             inRange = true;
         }
-        interact.SetActive(true);
+        player.interactText.SetActive(true);
+        player.text_interactText.text = "E to Interact";
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        player.interactText.SetActive(false);
         if (collision.gameObject.GetComponent<PlayerController>() == player)
         {
             inRange = false;
             player = null;
         }
-        interact.SetActive(false);
     }
 
     void setDialogue(int i)
@@ -171,7 +171,7 @@ public class NPC : MonoBehaviour
         player.inspectText.SetActive(true);
         player.buttons.SetActive(true);
         inQuest = true;
-        interact.SetActive(false);
+        player.interactText.SetActive(false);
 
         if (player.collectionHints > 0)
         {

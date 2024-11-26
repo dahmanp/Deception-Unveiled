@@ -30,6 +30,8 @@ public class RestPeriod : MonoBehaviour
     public GameObject[] fakeNPCSpots;
     public Sprite[] fakeNPCSprites;
 
+    public string[] days;
+
     void Start()
     {
         player = playerObj.GetComponent<PlayerController>();
@@ -99,7 +101,7 @@ public class RestPeriod : MonoBehaviour
         selectOption.SetActive(false);
 
         day++;
-        dateAndTime.text = "Day " + day + ", Morning.";
+        dateAndTime.text = "Day " + days[day-1] + ": Morning.";
 
         totalStat.text = "Total Quests: " + player.totalQuests;
         failStat.text = "Quests Failed: " + player.questsFailed;

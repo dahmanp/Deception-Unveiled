@@ -289,8 +289,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Locations
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1184,8 +1184,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Interviews
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1453,8 +1453,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Items
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1731,16 +1731,72 @@ MonoBehaviour:
   - Giant gemstone
   - Unearthed bones
   ITEM_conclusions:
-  - a
-  - a
-  - s
-  - a
-  - s
-  - s
-  - s
-  - s
-  - s
-  - s
+  - The first strange event reported was a series of eerie whispers heard throughout
+    the town during the night. At first, people dismissed it as the wind or animals,
+    but the whispers became more persistent and strange, with some claiming they
+    could hear voices calling out names. The whispers were unlike anything anyone
+    had heard before and were the first indication that something unnatural had entered
+    the town.
+  - "After the whispers began, a horrific discovery was made when the torn clothing
+    of a young girl was found in the woods. The fabric was shredded as if by claws
+    or some other unnatural force. The girl\u2019s body was later discovered, showing
+    signs of a violent struggle, her face frozen in terror. This death sent shockwaves
+    through the town, and the residents realized that something malevolent was at
+    work."
+  - "In their search, investigators found a trail of unusual footprints near the
+    site where the girl\u2019s body was discovered. The prints appeared human at
+    first, but they were larger and distorted, with claw-like indentations. These
+    strange tracks led deeper into the forest, further indicating that whatever had
+    killed the girl was not entirely human. The footprints were a sign that a dangerous
+    and mysterious force had come to town. "
+  - "Investigators uncovered a series of journal entries written by a local researcher
+    who had been studying ancient magic. His writings described his fascination with
+    forbidden rituals and his intent to summon a demon. However, the journal took
+    a darker turn when it became clear that the researcher had accidentally summoned
+    something far worse: shapeshifters, creatures that could change their form at
+    will. The researcher\u2019s experiments had unleashed these beings into the world,
+    and the town was now at their mercy."
+  - "Investigators uncovered a series of journal entries written by a local researcher
+    who had been studying ancient magic. His writings described his fascination with
+    forbidden rituals and his intent to summon a demon. However, the journal took
+    a darker turn when it became clear that the researcher had accidentally summoned
+    something far worse: shapeshifters, creatures that could change their form at
+    will. The researcher\u2019s experiments had unleashed these beings into the world,
+    and the town was now at their mercy."
+  - "The researcher had found a forbidden tome filled with ancient spells, incantations,
+    and rituals. The tome\u2019s magic was unpredictable, and instead of summoning
+    a demon as he had intended, he called forth shapeshifters\u2014beings that had
+    never existed before. In a desperate attempt to bind them, the researcher used
+    more of the tome\u2019s dark rituals, but the shapeshifters proved too powerful
+    to control."
+  - "The researcher used enchanted chains to contain the shapeshifters, hoping to
+    prevent them from shifting and to study them in a fixed form. The chains were
+    designed to suppress their powers, but the creatures were not easily bound. Over
+    time, they grew stronger, and eventually, the shapeshifters broke the chains,
+    escaping their confines. The researcher\u2019s control over them was short-lived,
+    and his experiment had spiraled out of control."
+  - "In his frantic search for a way to control the shapeshifters, the researcher
+    came across a long-buried burial site. Here, he unearthed the bones of an ancient
+    order that had once fought these same creatures. The bones were old, but they
+    contained strange markings\u2014possibly a key to understanding the shapeshifters\u2019
+    origin. These remains seemed to hold an ancient power that could either help
+    control or banish the creatures. The researcher became increasingly obsessed
+    with them, convinced that their secrets were the key to mastering the shapeshifters."
+  - "The shapeshifters, now free and more dangerous than ever, seemed to be drawn
+    toward a powerful artifact hidden in the town\u2014a giant gemstone of mysterious
+    origin. Legends surrounding the gemstone spoke of its immense magical properties,
+    capable of enhancing the powers of those who possessed it. The shapeshifters
+    likely sought the gemstone to increase their abilities, ensuring that they could
+    never be contained again and possibly turning the entire town into a realm of
+    their control."
+  - "The key to stopping the shapeshifters lies in the obscure symbols discovered
+    during the researcher\u2019s investigation. These symbols, etched into the bones
+    of the ancient order, held the power of an old and forgotten ritual. If deciphered
+    and performed correctly, the ritual could banish the shapeshifters and prevent
+    them from claiming the gemstone\u2019s power. The symbols may hold the last hope
+    for the town, but unlocking their full meaning will require knowledge of the
+    ancient magic and the courage to perform the ritual before the shapeshifters
+    grow too powerful."
   INT_questions:
   - 
   - 
@@ -2047,8 +2103,8 @@ MonoBehaviour:
   m_text: Now that you have gathered enough clues, which set do you want to use to
     solve the mystery?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2286,8 +2342,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The End
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2421,8 +2477,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Interviews
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2785,8 +2841,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2986,8 +3042,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Locations
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3121,8 +3177,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Items
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3256,8 +3312,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BLANK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
+  m_sharedMaterial: {fileID: 1536249097445303326, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3391,7 +3447,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: BLANK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55e40170fd1f0994cb2dae9de05536fa, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3455,7 +3511,7 @@ MonoBehaviour:
   m_margin: {x: -0.35430926, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2045270207
@@ -3503,7 +3559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.24739075, y: -27.986183}
+  m_AnchoredPosition: {x: 0.24737549, y: -27.986183}
   m_SizeDelta: {x: 12, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068245203
@@ -3790,14 +3846,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 68b7d041b4d0a8a42aebd51ea4ed2f67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

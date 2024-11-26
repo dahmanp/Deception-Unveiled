@@ -58,17 +58,18 @@ public class MayorNPC : MonoBehaviour
             player = potentialPlayer;
             inRange = true;
         }
-        interact.SetActive(true);
+        player.interactText.SetActive(true);
+        player.text_interactText.text = "E to Interact";
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        player.interactText.SetActive(false);
         if (collision.gameObject.GetComponent<PlayerControllerTutorial>() == player)
         {
             inRange = false;
             player = null;
         }
-        interact.SetActive(false);
     }
 
     public void start()

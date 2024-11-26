@@ -7,24 +7,18 @@ Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
 - WASD - movement
 
 What's New:
-- puzzles for item investigation and location inspection
-	- As a player who finds it difficult to engage with side quests,
-	  I want there to be puzzles to solve, so that I can better immerse
-	  myself in the quests.
-- player marker for mini map
-	- As a player I want to be able to open a map to the available game
-          world so that I can gather information to help complete quests.
-- epilogue sequence
-	- As a player who likes story conclusions, I would like to see an
-	  interesting ending sequence, so that I can feel satisfied when
-	  completing the story.
-- Fake NPC art assets
-	- As a player who likes art assets, I want the Fake NPCs to have
-	  actual art assets.
+- updated ui
+	- As a player who likes atmosphere, I would like UI and cutscene art
+	  assets, so that I can feel more immersed.
+- ui npc assets
+	- As a player who likes atmosphere, I would like UI and cutscene art
+	  assets, so that I can feel more immersed.
+- ui main character assets
+	- As a player who likes character, I would like art assets for the
+	  main character, so I can relate to them more.
 
 What's next:
-- ui npc assets
-- ui mc assets
 - cutscene art assets
 - puzzle art assets
-- mc sprite / walk cycle
+- mc walk cycle
+- finish writing

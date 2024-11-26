@@ -19,7 +19,6 @@ public class NPC_Interview : MonoBehaviour
     private bool inRange = false;
     public InterviewQuest quest;
     private BoxCollider2D boxCollider;
-    public GameObject interact;
 
     public int image_id;
     public SpriteRenderer groundImage;
@@ -117,17 +116,18 @@ public class NPC_Interview : MonoBehaviour
             player = potentialPlayer;
             inRange = true;
         }
-        interact.SetActive(true);
+        player.interactText.SetActive(true);
+        player.text_interactText.text = "E to Interact";
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        player.interactText.SetActive(false);
         if (collision.gameObject.GetComponent<PlayerController>() == player)
         {
             inRange = false;
             player = null;
         }
-        interact.SetActive(false);
     }
 
     void setDialogue(int i)
@@ -194,7 +194,7 @@ public class NPC_Interview : MonoBehaviour
             Debug.Log("start Error");
             return;
         }
-        interact.SetActive(false);
+        player.interactText.SetActive(false);
 
         player.desc.text = intro_quest;
         player.inspectText.SetActive(true);
