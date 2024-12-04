@@ -7,18 +7,21 @@ Playable Build: [Link](https://dahmanp.github.io/Deception-Unveiled/)
 - WASD - movement
 
 What's New:
-- updated ui
-	- As a player who likes atmosphere, I would like UI and cutscene art
-	  assets, so that I can feel more immersed.
-- ui npc assets
-	- As a player who likes atmosphere, I would like UI and cutscene art
-	  assets, so that I can feel more immersed.
-- ui main character assets
-	- As a player who likes character, I would like art assets for the
-	  main character, so I can relate to them more.
+- mc walk cycle
+	- As a player who likes movement response, I would like there to be
+	  a walk cycle for the main character so that it feels more alive
+- updated audio: sound effects and music
+	- As a player who likes atmosphere, I would like sound so that it
+	  doesn't feel like I'm walking through void
+- volume control
+	- As a player who has sensitive ears, I would like to be able to
+	  change the volume of the game so that I can enjoy it better
+- updated main menu assets
+	- As a player who likes good first impressions, I would like the
+	  main menu to fit the theme of the game so I know what I'm getting
+	  into
 
 What's next:
 - cutscene art assets
 - puzzle art assets
-- mc walk cycle
 - finish writing

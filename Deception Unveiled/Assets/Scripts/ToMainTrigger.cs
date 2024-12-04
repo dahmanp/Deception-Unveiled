@@ -14,6 +14,8 @@ public class ToMainTrigger : MonoBehaviour
     public GameObject[] screens;
     public int currScreen;
 
+    public AudioSource pageTurn;
+
     void Awake()
     {
         exitcollider.enabled = false;
@@ -37,12 +39,14 @@ public class ToMainTrigger : MonoBehaviour
         screens[2].SetActive(false);
         screens[3].SetActive(false);
         Time.timeScale = 0f;
+        pageTurn.Play();
     }
 
     public void closeJournal()
     {
         journalScreen.SetActive(false);
         Time.timeScale = 1f;
+        pageTurn.Play();
     }
 
     public void leftButton()
@@ -61,6 +65,7 @@ public class ToMainTrigger : MonoBehaviour
             currScreen--;
             screens[currScreen].SetActive(true);
         }
+        pageTurn.Play();
     }
 
     public void rightButton()
@@ -79,6 +84,7 @@ public class ToMainTrigger : MonoBehaviour
             currScreen++;
             screens[currScreen].SetActive(true);
         }
+        pageTurn.Play();
     }
 
     void OnTriggerEnter2D(Collider2D other)

@@ -33,6 +33,16 @@ public class PlayerControllerTutorial : MonoBehaviour
     public Sprite[] sprites;
     public int spriteCount = 0;
 
+    public AudioSource walking;
+    public bool currPlaying = false;
+
+    //ANIMATION
+    private enum AnimationState { idle, front_walking, back_walking, side_walking }
+    private Animator anim;
+    Vector2 movement;
+    private float directionY = 0f;
+    private float directionX = 0f;
+
     private static PlayerControllerTutorial instance;
 
     void Start()
@@ -41,11 +51,13 @@ public class PlayerControllerTutorial : MonoBehaviour
         mainTrigger = FindObjectOfType<ToMainTrigger>();
         objective = "Speak to the mayor of the town to learn more about your assignment.";
         objectiveText.text = objective;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         Move();
+        walkCycle();
     }
 
     public void NextButton()
@@ -83,8 +95,50 @@ public class PlayerControllerTutorial : MonoBehaviour
 
     void Move()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        rig.velocity = new Vector2(x, y) * moveSpeed;
+        directionX = Input.GetAxis("Horizontal");
+        directionY = Input.GetAxis("Vertical");
+        rig.velocity = new Vector2(directionX, directionY) * moveSpeed;
+
+        if (directionY == 0 && directionX == 0)
+        {
+            walking.Stop();
+            currPlaying = false;
+        }
+        else if (currPlaying == false)
+        {
+            walking.Play();
+            currPlaying = true;
+        }
+    }
+
+    private void walkCycle()
+    {
+        AnimationState currState;
+
+        if (directionX > 0f)
+        {
+            currState = AnimationState.side_walking;
+            sr.flipX = false;
+
+        }
+        else if (directionX < 0f)
+        {
+            currState = AnimationState.side_walking;
+            sr.flipX = true;
+        }
+        else if (directionY > 0f)
+        {
+            currState = AnimationState.back_walking;
+        }
+        else if (directionY < 0f)
+        {
+            currState = AnimationState.front_walking;
+        }
+        else
+        {
+            currState = AnimationState.idle;
+        }
+
+        anim.SetInteger("State", (int)currState);
     }
 }
