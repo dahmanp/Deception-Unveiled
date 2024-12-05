@@ -10,6 +10,9 @@ public class OutroCutscene : MonoBehaviour
     public float slideDuration = 3f;
 
     public GameObject exitScreen;
+    public GameObject intro;
+    public GameObject question;
+    public GameObject text;
 
     private int currSlide = 0;
     public int slideAmt;
@@ -29,6 +32,9 @@ public class OutroCutscene : MonoBehaviour
         if (completed)
         {
             exitScreen.SetActive(true);
+            intro.SetActive(false);
+            question.SetActive(false);
+            text.SetActive(false);
         }
     }
 

@@ -50,7 +50,6 @@ public class Locations : MonoBehaviour
         {
             yield return null;
         }
-        Debug.Log(collected);
         if (collected == false)
         {
             if (puzzleCheck.puzzleComplete == true)

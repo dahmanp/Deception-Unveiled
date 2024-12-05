@@ -125,7 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: 0
-  interact: {fileID: 0}
   image_id: 0
   groundImage: {fileID: 8951467014621211104}
   intro_quests:

@@ -836,7 +836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &782473667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -853,9 +853,9 @@ RectTransform:
   m_Father: {fileID: 1199500204}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -65.39365}
   m_SizeDelta: {x: 160, y: 36.9091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782473668
@@ -1686,8 +1686,7 @@ MonoBehaviour:
     first reported?
   - What was found when searching for clues about the missing girl and other strange
     occurrences?
-  - What was discovered that provided more information about the origins of the creatures
-    behind the recent deaths?
+  - What did the townspeople do in response to the recent events?
   - What did investigators discover that provided more information about the creatures
     behind the recent deaths?
   - What artifact did the researcher use to summon the monsters?
@@ -1702,7 +1701,7 @@ MonoBehaviour:
   - Whispers in the night
   - Strange journal entries
   - Whispers in the night
-  - Strange journal entries
+  - Folkore and Legend
   - Unearthed bones
   - Broken chains
   - Broken chains
@@ -1713,7 +1712,7 @@ MonoBehaviour:
   - Unusual footprints
   - Torn Clothing
   - Strange journal entries
-  - Folkore and legends
+  - Unusual Footprints
   - Strange journal entries
   - Obscure symbols
   - Unearthed bones
@@ -1750,13 +1749,10 @@ MonoBehaviour:
     strange tracks led deeper into the forest, further indicating that whatever had
     killed the girl was not entirely human. The footprints were a sign that a dangerous
     and mysterious force had come to town. "
-  - "Investigators uncovered a series of journal entries written by a local researcher
-    who had been studying ancient magic. His writings described his fascination with
-    forbidden rituals and his intent to summon a demon. However, the journal took
-    a darker turn when it became clear that the researcher had accidentally summoned
-    something far worse: shapeshifters, creatures that could change their form at
-    will. The researcher\u2019s experiments had unleashed these beings into the world,
-    and the town was now at their mercy."
+  - The townspeople began to talk amongst themselves, worrying for their own safety
+    and the livelihood of the town. Many took to writing warnings on the message
+    board, and others started to gather in the town square to discuss the future,
+    as bleak as it was.
   - "Investigators uncovered a series of journal entries written by a local researcher
     who had been studying ancient magic. His writings described his fascination with
     forbidden rituals and his intent to summon a demon. However, the journal took
@@ -2667,7 +2663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1515233466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2684,9 +2680,9 @@ RectTransform:
   m_Father: {fileID: 1199500204}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -65.39365}
   m_SizeDelta: {x: 160, y: 36.9091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515233467
@@ -2817,10 +2813,10 @@ RectTransform:
   m_Father: {fileID: 2131415700}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0014877}
-  m_SizeDelta: {x: 800, y: 341.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.00010681152}
+  m_SizeDelta: {x: 0, y: -0.17999268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522727345
 MonoBehaviour:
@@ -2873,10 +2869,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screen: {fileID: 1522727345}
-  slides: []
+  slides:
+  - {fileID: 21300000, guid: d63ffb10fcfb0544e90bb162bdefb13f, type: 3}
+  - {fileID: 21300000, guid: bd4b2e9200d54694282fe6626da9ce3d, type: 3}
+  - {fileID: 21300000, guid: 70252c764aca89744a7909c1de568d68, type: 3}
   slideDuration: 3
-  exitScreen: {fileID: 0}
-  slideAmt: 0
+  exitScreen: {fileID: 1248337307}
+  intro: {fileID: 28139020}
+  question: {fileID: 1105847605}
+  text: {fileID: 906296985}
+  slideAmt: 3
   completed: 0
 --- !u!1 &1604209148
 GameObject:
@@ -3887,6 +3889,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070021992}
   m_CullTransparentMesh: 1
+--- !u!1 &2106119902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106119903}
+  m_Layer: 0
+  m_Name: SlideshowManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2106119903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106119902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 399.34418, y: 222.5214, z: -2.2445688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131415699
 GameObject:
   m_ObjectHideFlags: 0
