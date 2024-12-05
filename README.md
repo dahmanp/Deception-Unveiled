@@ -20,8 +20,10 @@ What's New:
 	- As a player who likes good first impressions, I would like the
 	  main menu to fit the theme of the game so I know what I'm getting
 	  into
+ - puzzle art assets
+	- As a player who likes art assets, I would like the puzzles to be
+	  actual images 
 
 What's next:
 - cutscene art assets
-- puzzle art assets
 - finish writing
