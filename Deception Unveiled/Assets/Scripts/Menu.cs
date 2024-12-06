@@ -40,6 +40,7 @@ public class Menu : MonoBehaviour
         screens[1].SetActive(false);
         screens[2].SetActive(false);
         screens[3].SetActive(false);
+        screens[4].SetActive(false);
         Time.timeScale = 0f;
         pageTurn.Play();
     }
